@@ -1,0 +1,5061 @@
+{
+  "creditos": {
+    "maximos": 1459,
+    "minimos": 469,
+    "obligatorias": 376,
+    "optativas": 1083
+  },
+  "division": "cbi",
+  "niveles": {
+    "tbp": {
+      "creditos": {
+        "maximos": 189,
+        "minimos": 189,
+        "obligatorias": 189,
+        "optativas": 0
+      },
+      "nombre": "Tronco Básico Profesional"
+    },
+    "tg": {
+      "creditos": {
+        "maximos": 132,
+        "minimos": 132,
+        "obligatorias": 132,
+        "optativas": 0
+      },
+      "nombre": "Tronco General"
+    },
+    "ti": {
+      "creditos": {
+        "maximos": 909,
+        "minimos": 96,
+        "obligatorias": 21,
+        "optativas": 888
+      },
+      "niveles": {
+        "0": {
+          "creditos": {
+            "maximos": 474,
+            "minimos": 45,
+            "obligatorias": 0,
+            "optativas": 474
+          },
+          "nombre": "Optativas de Movilidad y Científico-Técnicas"
+        },
+        "1": {
+          "creditos": {
+            "maximos": 288,
+            "minimos": 0,
+            "obligatorias": 0,
+            "optativas": 288
+          },
+          "nombre": "Optativas de Integración restantes"
+        }
+      },
+      "nombre": "Tronco de Integración"
+    },
+    "tim": {
+      "creditos": {
+        "maximos": 225,
+        "minimos": 48,
+        "obligatorias": 30,
+        "optativas": 195
+      },
+      "nombre": "Tronco Inter y Multidisciplinar"
+    },
+    "tna": {
+      "creditos": {
+        "maximos": 4,
+        "minimos": 4,
+        "obligatorias": 4,
+        "optativas": 0
+      },
+      "nombre": "Tronco de Nivelación Académica"
+    }
+  },
+  "nombre": "Ingeniería Física",
+  "plan": "4",
+  "ueas": {
+    "1100021": {
+      "clave": "1100021",
+      "creditos": 3,
+      "nombre": "Optativa Técnica de Movilidad I",
+      "obligatoria": false,
+      "practica": 0,
+      "seriaciones": [
+        {
+          "creditos": [
+            {
+              "numero": 240,
+              "ubicacion": []
+            }
+          ],
+          "otras": [
+            "autorizacion"
+          ]
+        }
+      ],
+      "teoria": 1.5,
+      "ubicacion": [
+        "ti",
+        "0"
+      ]
+    },
+    "1100022": {
+      "clave": "1100022",
+      "creditos": 3,
+      "nombre": "Optativa Técnica de Movilidad II",
+      "obligatoria": false,
+      "practica": 0,
+      "seriaciones": [
+        {
+          "creditos": [
+            {
+              "numero": 240,
+              "ubicacion": []
+            }
+          ],
+          "otras": [
+            "autorizacion"
+          ]
+        }
+      ],
+      "teoria": 1.5,
+      "ubicacion": [
+        "ti",
+        "0"
+      ]
+    },
+    "1100023": {
+      "clave": "1100023",
+      "creditos": 6,
+      "nombre": "Optativa Técnica de Movilidad III",
+      "obligatoria": false,
+      "practica": 2,
+      "seriaciones": [
+        {
+          "creditos": [
+            {
+              "numero": 240,
+              "ubicacion": []
+            }
+          ],
+          "otras": [
+            "autorizacion"
+          ]
+        }
+      ],
+      "teoria": 2,
+      "ubicacion": [
+        "ti",
+        "0"
+      ]
+    },
+    "1100024": {
+      "clave": "1100024",
+      "creditos": 6,
+      "nombre": "Optativa Técnica de Movilidad IV",
+      "obligatoria": false,
+      "practica": 2,
+      "seriaciones": [
+        {
+          "creditos": [
+            {
+              "numero": 240,
+              "ubicacion": []
+            }
+          ],
+          "otras": [
+            "autorizacion"
+          ]
+        }
+      ],
+      "teoria": 2,
+      "ubicacion": [
+        "ti",
+        "0"
+      ]
+    },
+    "1100025": {
+      "clave": "1100025",
+      "creditos": 9,
+      "nombre": "Optativa Técnica de Movilidad V",
+      "obligatoria": false,
+      "practica": 3,
+      "seriaciones": [
+        {
+          "creditos": [
+            {
+              "numero": 240,
+              "ubicacion": []
+            }
+          ],
+          "otras": [
+            "autorizacion"
+          ]
+        }
+      ],
+      "teoria": 3,
+      "ubicacion": [
+        "ti",
+        "0"
+      ]
+    },
+    "1100026": {
+      "clave": "1100026",
+      "creditos": 9,
+      "nombre": "Optativa Técnica de Movilidad VI",
+      "obligatoria": false,
+      "practica": 3,
+      "seriaciones": [
+        {
+          "creditos": [
+            {
+              "numero": 240,
+              "ubicacion": []
+            }
+          ],
+          "otras": [
+            "autorizacion"
+          ]
+        }
+      ],
+      "teoria": 3,
+      "ubicacion": [
+        "ti",
+        "0"
+      ]
+    },
+    "1100037": {
+      "clave": "1100037",
+      "creditos": 6,
+      "nombre": "Introducción a la Ingeniería",
+      "obligatoria": true,
+      "practica": 0,
+      "seriaciones": [
+        {}
+      ],
+      "teoria": 3,
+      "trimestre": 1,
+      "ubicacion": [
+        "tim"
+      ]
+    },
+    "1100038": {
+      "clave": "1100038",
+      "creditos": 6,
+      "nombre": "Introducción al Desarrollo Sustentable",
+      "obligatoria": true,
+      "practica": 0,
+      "seriaciones": [
+        {
+          "creditos": [
+            {
+              "numero": 50,
+              "ubicacion": []
+            }
+          ]
+        }
+      ],
+      "teoria": 3,
+      "trimestre": 3,
+      "ubicacion": [
+        "tim"
+      ]
+    },
+    "1100039": {
+      "clave": "1100039",
+      "creditos": 6,
+      "nombre": "Innovación",
+      "obligatoria": false,
+      "practica": 3,
+      "seriaciones": [
+        {
+          "creditos": [
+            {
+              "numero": 250,
+              "ubicacion": []
+            }
+          ]
+        }
+      ],
+      "teoria": 1.5,
+      "ubicacion": [
+        "tim"
+      ]
+    },
+    "1100040": {
+      "clave": "1100040",
+      "creditos": 6,
+      "nombre": "Taller de Planeación y Ejecución de Proyectos",
+      "obligatoria": true,
+      "practica": 3,
+      "seriaciones": [
+        {
+          "creditos": [
+            {
+              "numero": 300,
+              "ubicacion": []
+            }
+          ],
+          "ueas": [
+            {
+              "clave": "1100096",
+              "coseriada": false
+            }
+          ]
+        }
+      ],
+      "teoria": 1.5,
+      "trimestre": 9,
+      "ubicacion": [
+        "tim"
+      ]
+    },
+    "1100041": {
+      "clave": "1100041",
+      "creditos": 6,
+      "nombre": "Retos del Desarrollo Nacional",
+      "obligatoria": true,
+      "practica": 0,
+      "seriaciones": [
+        {
+          "creditos": [
+            {
+              "numero": 320,
+              "ubicacion": []
+            }
+          ]
+        }
+      ],
+      "teoria": 3,
+      "trimestre": 12,
+      "ubicacion": [
+        "tim"
+      ]
+    },
+    "1100073": {
+      "clave": "1100073",
+      "creditos": 6,
+      "nombre": "El Paisaje como Agente de los Asentamientos y de la Cultura",
+      "obligatoria": false,
+      "practica": 0,
+      "seriaciones": [
+        {
+          "creditos": [
+            {
+              "numero": 150,
+              "ubicacion": []
+            }
+          ]
+        }
+      ],
+      "teoria": 3,
+      "ubicacion": [
+        "tim"
+      ]
+    },
+    "1100074": {
+      "clave": "1100074",
+      "creditos": 6,
+      "nombre": "Familia y Violencia en el México Contemporáneo",
+      "obligatoria": false,
+      "practica": 0,
+      "seriaciones": [
+        {
+          "creditos": [
+            {
+              "numero": 150,
+              "ubicacion": []
+            }
+          ]
+        }
+      ],
+      "teoria": 3,
+      "ubicacion": [
+        "tim"
+      ]
+    },
+    "1100075": {
+      "clave": "1100075",
+      "creditos": 6,
+      "nombre": "Género y Sexualidad",
+      "obligatoria": false,
+      "practica": 0,
+      "seriaciones": [
+        {
+          "creditos": [
+            {
+              "numero": 150,
+              "ubicacion": []
+            }
+          ]
+        }
+      ],
+      "teoria": 3,
+      "ubicacion": [
+        "tim"
+      ]
+    },
+    "1100076": {
+      "clave": "1100076",
+      "creditos": 6,
+      "nombre": "Poder y Género",
+      "obligatoria": false,
+      "practica": 0,
+      "seriaciones": [
+        {
+          "creditos": [
+            {
+              "numero": 150,
+              "ubicacion": []
+            }
+          ]
+        }
+      ],
+      "teoria": 3,
+      "ubicacion": [
+        "tim"
+      ]
+    },
+    "1100077": {
+      "clave": "1100077",
+      "creditos": 6,
+      "nombre": "Administración y Economía Política de la Ciencia y Tecnología",
+      "obligatoria": false,
+      "practica": 0,
+      "seriaciones": [
+        {
+          "creditos": [
+            {
+              "numero": 150,
+              "ubicacion": []
+            }
+          ]
+        }
+      ],
+      "teoria": 3,
+      "ubicacion": [
+        "tim"
+      ]
+    },
+    "1100078": {
+      "clave": "1100078",
+      "creditos": 6,
+      "nombre": "Derechos Humanos",
+      "obligatoria": false,
+      "practica": 0,
+      "seriaciones": [
+        {
+          "creditos": [
+            {
+              "numero": 150,
+              "ubicacion": []
+            }
+          ]
+        }
+      ],
+      "teoria": 3,
+      "ubicacion": [
+        "tim"
+      ]
+    },
+    "1100079": {
+      "clave": "1100079",
+      "creditos": 6,
+      "nombre": "Economía Mundial",
+      "obligatoria": false,
+      "practica": 0,
+      "seriaciones": [
+        {
+          "creditos": [
+            {
+              "numero": 150,
+              "ubicacion": []
+            }
+          ]
+        }
+      ],
+      "teoria": 3,
+      "ubicacion": [
+        "tim"
+      ]
+    },
+    "1100080": {
+      "clave": "1100080",
+      "creditos": 6,
+      "nombre": "Ética y Valores",
+      "obligatoria": false,
+      "practica": 0,
+      "seriaciones": [
+        {
+          "creditos": [
+            {
+              "numero": 150,
+              "ubicacion": []
+            }
+          ]
+        }
+      ],
+      "teoria": 3,
+      "ubicacion": [
+        "tim"
+      ]
+    },
+    "1100081": {
+      "clave": "1100081",
+      "creditos": 6,
+      "nombre": "Historia Social de México en el Siglo XX",
+      "obligatoria": false,
+      "practica": 0,
+      "seriaciones": [
+        {
+          "creditos": [
+            {
+              "numero": 150,
+              "ubicacion": []
+            }
+          ]
+        }
+      ],
+      "teoria": 3,
+      "ubicacion": [
+        "tim"
+      ]
+    },
+    "1100082": {
+      "clave": "1100082",
+      "creditos": 6,
+      "nombre": "Responsabilidad Social Organizacional",
+      "obligatoria": false,
+      "practica": 0,
+      "seriaciones": [
+        {
+          "creditos": [
+            {
+              "numero": 150,
+              "ubicacion": []
+            }
+          ]
+        }
+      ],
+      "teoria": 3,
+      "ubicacion": [
+        "tim"
+      ]
+    },
+    "1100083": {
+      "clave": "1100083",
+      "creditos": 6,
+      "nombre": "Comunicación en Proyectos Multidisciplinarios",
+      "obligatoria": false,
+      "practica": 0,
+      "seriaciones": [
+        {
+          "creditos": [
+            {
+              "numero": 150,
+              "ubicacion": []
+            }
+          ]
+        }
+      ],
+      "teoria": 3,
+      "ubicacion": [
+        "tim"
+      ]
+    },
+    "1100084": {
+      "clave": "1100084",
+      "creditos": 6,
+      "nombre": "Herramientas para el Emprendedor",
+      "obligatoria": false,
+      "practica": 0,
+      "seriaciones": [
+        {
+          "creditos": [
+            {
+              "numero": 150,
+              "ubicacion": []
+            }
+          ]
+        }
+      ],
+      "teoria": 3,
+      "ubicacion": [
+        "tim"
+      ]
+    },
+    "1100085": {
+      "clave": "1100085",
+      "creditos": 6,
+      "nombre": "Inserción Laboral",
+      "obligatoria": false,
+      "practica": 0,
+      "seriaciones": [
+        {
+          "creditos": [
+            {
+              "numero": 150,
+              "ubicacion": []
+            }
+          ]
+        }
+      ],
+      "teoria": 3,
+      "ubicacion": [
+        "tim"
+      ]
+    },
+    "1100086": {
+      "clave": "1100086",
+      "creditos": 6,
+      "nombre": "Planeación Estratégica",
+      "obligatoria": false,
+      "practica": 0,
+      "seriaciones": [
+        {
+          "creditos": [
+            {
+              "numero": 150,
+              "ubicacion": []
+            }
+          ]
+        }
+      ],
+      "teoria": 3,
+      "ubicacion": [
+        "tim"
+      ]
+    },
+    "1100087": {
+      "clave": "1100087",
+      "creditos": 6,
+      "nombre": "Proyectos de Inversión",
+      "obligatoria": false,
+      "practica": 0,
+      "seriaciones": [
+        {
+          "creditos": [
+            {
+              "numero": 150,
+              "ubicacion": []
+            }
+          ]
+        }
+      ],
+      "teoria": 3,
+      "ubicacion": [
+        "tim"
+      ]
+    },
+    "1100088": {
+      "clave": "1100088",
+      "creditos": 6,
+      "nombre": "Historia del Arte",
+      "obligatoria": false,
+      "practica": 0,
+      "seriaciones": [
+        {
+          "creditos": [
+            {
+              "numero": 150,
+              "ubicacion": []
+            }
+          ]
+        }
+      ],
+      "teoria": 3,
+      "ubicacion": [
+        "tim"
+      ]
+    },
+    "1100089": {
+      "clave": "1100089",
+      "creditos": 6,
+      "nombre": "Taller de Dibujo",
+      "obligatoria": false,
+      "practica": 3,
+      "seriaciones": [
+        {
+          "creditos": [
+            {
+              "numero": 150,
+              "ubicacion": []
+            }
+          ]
+        }
+      ],
+      "teoria": 1.5,
+      "ubicacion": [
+        "tim"
+      ]
+    },
+    "1100090": {
+      "clave": "1100090",
+      "creditos": 6,
+      "nombre": "Taller de Fotografía",
+      "obligatoria": false,
+      "practica": 3,
+      "seriaciones": [
+        {
+          "creditos": [
+            {
+              "numero": 150,
+              "ubicacion": []
+            }
+          ]
+        }
+      ],
+      "teoria": 1.5,
+      "ubicacion": [
+        "tim"
+      ]
+    },
+    "1100091": {
+      "clave": "1100091",
+      "creditos": 6,
+      "nombre": "Taller de Teatro",
+      "obligatoria": false,
+      "practica": 3,
+      "seriaciones": [
+        {
+          "creditos": [
+            {
+              "numero": 150,
+              "ubicacion": []
+            }
+          ]
+        }
+      ],
+      "teoria": 1.5,
+      "ubicacion": [
+        "tim"
+      ]
+    },
+    "1100092": {
+      "clave": "1100092",
+      "creditos": 6,
+      "nombre": "Divulgación del Conocimiento",
+      "obligatoria": false,
+      "practica": 0,
+      "seriaciones": [
+        {
+          "creditos": [
+            {
+              "numero": 150,
+              "ubicacion": []
+            }
+          ]
+        }
+      ],
+      "teoria": 3,
+      "ubicacion": [
+        "tim"
+      ]
+    },
+    "1100093": {
+      "clave": "1100093",
+      "creditos": 6,
+      "nombre": "Habilidades Creativas para el Ámbito Profesional",
+      "obligatoria": false,
+      "practica": 0,
+      "seriaciones": [
+        {
+          "creditos": [
+            {
+              "numero": 150,
+              "ubicacion": []
+            }
+          ]
+        }
+      ],
+      "teoria": 3,
+      "ubicacion": [
+        "tim"
+      ]
+    },
+    "1100094": {
+      "clave": "1100094",
+      "creditos": 6,
+      "nombre": "Laboratorio de Usabilidad",
+      "obligatoria": false,
+      "practica": 3,
+      "seriaciones": [
+        {
+          "creditos": [
+            {
+              "numero": 150,
+              "ubicacion": []
+            }
+          ]
+        }
+      ],
+      "teoria": 1.5,
+      "ubicacion": [
+        "tim"
+      ]
+    },
+    "1100095": {
+      "clave": "1100095",
+      "creditos": 6,
+      "nombre": "Narrativa para Medios Audiovisuales y Digitales",
+      "obligatoria": false,
+      "practica": 0,
+      "seriaciones": [
+        {
+          "creditos": [
+            {
+              "numero": 150,
+              "ubicacion": []
+            }
+          ]
+        }
+      ],
+      "teoria": 3,
+      "ubicacion": [
+        "tim"
+      ]
+    },
+    "1100096": {
+      "clave": "1100096",
+      "creditos": 6,
+      "nombre": "Taller de Expresión Oral y Escrita",
+      "obligatoria": true,
+      "practica": 3,
+      "seriaciones": [
+        {
+          "creditos": [
+            {
+              "numero": 200,
+              "ubicacion": []
+            }
+          ]
+        }
+      ],
+      "teoria": 1.5,
+      "trimestre": 7,
+      "ubicacion": [
+        "tim"
+      ]
+    },
+    "1100099": {
+      "clave": "1100099",
+      "creditos": 6,
+      "nombre": "Experiencia Inter y Multidisciplinar",
+      "obligatoria": false,
+      "practica": 2,
+      "seriaciones": [
+        {
+          "creditos": [
+            {
+              "numero": 150,
+              "ubicacion": []
+            }
+          ],
+          "otras": [
+            "autorizacion"
+          ]
+        }
+      ],
+      "teoria": 2,
+      "ubicacion": [
+        "tim"
+      ]
+    },
+    "1100106": {
+      "clave": "1100106",
+      "creditos": 3,
+      "nombre": "Seminario de Integración en Ingeniería Física",
+      "obligatoria": true,
+      "practica": 0,
+      "seriaciones": [
+        {
+          "creditos": [
+            {
+              "numero": 360,
+              "ubicacion": []
+            }
+          ],
+          "ueas": [
+            {
+              "clave": "1100040",
+              "coseriada": false
+            }
+          ]
+        }
+      ],
+      "teoria": 1.5,
+      "trimestre": 11,
+      "ubicacion": [
+        "ti"
+      ]
+    },
+    "1100116": {
+      "clave": "1100116",
+      "creditos": 18,
+      "nombre": "Proyecto de Integración en Ingeniería Física I",
+      "obligatoria": true,
+      "practica": 18,
+      "seriaciones": [
+        {
+          "otras": [
+            "autorizacion"
+          ],
+          "ueas": [
+            {
+              "clave": "1100106",
+              "coseriada": false
+            }
+          ]
+        }
+      ],
+      "teoria": 0,
+      "trimestre": 12,
+      "ubicacion": [
+        "ti"
+      ]
+    },
+    "1100126": {
+      "clave": "1100126",
+      "creditos": 18,
+      "nombre": "Proyecto de Integración en Ingeniería Física II",
+      "obligatoria": false,
+      "practica": 18,
+      "seriaciones": [
+        {
+          "otras": [
+            "autorizacion"
+          ],
+          "ueas": [
+            {
+              "clave": "1100106",
+              "coseriada": false
+            }
+          ]
+        }
+      ],
+      "teoria": 0,
+      "ubicacion": [
+        "ti",
+        "1"
+      ]
+    },
+    "1100136": {
+      "clave": "1100136",
+      "creditos": 6,
+      "nombre": "Introducción al Trabajo de Investigación en Ingeniería Física",
+      "obligatoria": false,
+      "practica": 6,
+      "seriaciones": [
+        {
+          "otras": [
+            "autorizacion"
+          ],
+          "ueas": [
+            {
+              "clave": "1100106",
+              "coseriada": false
+            }
+          ]
+        }
+      ],
+      "teoria": 0,
+      "ubicacion": [
+        "ti",
+        "1"
+      ]
+    },
+    "1100141": {
+      "clave": "1100141",
+      "creditos": 6,
+      "nombre": "Temas Selectos Inter y Multidisciplinares I",
+      "obligatoria": false,
+      "practica": 0,
+      "seriaciones": [
+        {
+          "creditos": [
+            {
+              "numero": 150,
+              "ubicacion": []
+            }
+          ]
+        }
+      ],
+      "teoria": 3,
+      "ubicacion": [
+        "tim"
+      ]
+    },
+    "1100142": {
+      "clave": "1100142",
+      "creditos": 6,
+      "nombre": "Temas Selectos Inter y Multidisciplinares II",
+      "obligatoria": false,
+      "practica": 0,
+      "seriaciones": [
+        {
+          "creditos": [
+            {
+              "numero": 150,
+              "ubicacion": []
+            }
+          ]
+        }
+      ],
+      "teoria": 3,
+      "ubicacion": [
+        "tim"
+      ]
+    },
+    "1100143": {
+      "clave": "1100143",
+      "creditos": 6,
+      "nombre": "Ética y Legislación Informática",
+      "obligatoria": false,
+      "practica": 0,
+      "seriaciones": [
+        {
+          "creditos": [
+            {
+              "numero": 250,
+              "ubicacion": []
+            }
+          ]
+        }
+      ],
+      "teoria": 3,
+      "ubicacion": [
+        "tim"
+      ]
+    },
+    "1100901": {
+      "clave": "1100901",
+      "creditos": 3,
+      "nombre": "Optativa Técnica 1",
+      "obligatoria": false,
+      "por_consejo": true,
+      "practica": 0,
+      "seriaciones": [
+        {
+          "otras": [
+            "equivalencia"
+          ]
+        }
+      ],
+      "teoria": 0,
+      "ubicacion": [
+        "ti"
+      ]
+    },
+    "1100902": {
+      "clave": "1100902",
+      "creditos": 3,
+      "nombre": "Optativa Técnica 2",
+      "obligatoria": false,
+      "por_consejo": true,
+      "practica": 0,
+      "seriaciones": [
+        {
+          "otras": [
+            "equivalencia"
+          ]
+        }
+      ],
+      "teoria": 0,
+      "ubicacion": [
+        "ti"
+      ]
+    },
+    "1100903": {
+      "clave": "1100903",
+      "creditos": 3,
+      "nombre": "Optativa Técnica 3",
+      "obligatoria": false,
+      "por_consejo": true,
+      "practica": 0,
+      "seriaciones": [
+        {
+          "otras": [
+            "equivalencia"
+          ]
+        }
+      ],
+      "teoria": 0,
+      "ubicacion": [
+        "ti"
+      ]
+    },
+    "1100907": {
+      "clave": "1100907",
+      "creditos": 6,
+      "nombre": "Optativa Técnica 7",
+      "obligatoria": false,
+      "por_consejo": true,
+      "practica": 0,
+      "seriaciones": [
+        {
+          "otras": [
+            "equivalencia"
+          ]
+        }
+      ],
+      "teoria": 0,
+      "ubicacion": [
+        "ti"
+      ]
+    },
+    "1100908": {
+      "clave": "1100908",
+      "creditos": 6,
+      "nombre": "Optativa Técnica 8",
+      "obligatoria": false,
+      "por_consejo": true,
+      "practica": 0,
+      "seriaciones": [
+        {
+          "otras": [
+            "equivalencia"
+          ]
+        }
+      ],
+      "teoria": 0,
+      "ubicacion": [
+        "ti"
+      ]
+    },
+    "1100910": {
+      "clave": "1100910",
+      "creditos": 6,
+      "nombre": "Optativa Técnica 10",
+      "obligatoria": false,
+      "por_consejo": true,
+      "practica": 0,
+      "seriaciones": [
+        {
+          "otras": [
+            "equivalencia"
+          ]
+        }
+      ],
+      "teoria": 0,
+      "ubicacion": [
+        "ti"
+      ]
+    },
+    "1100917": {
+      "clave": "1100917",
+      "creditos": 9,
+      "nombre": "Optativa Técnica 17",
+      "obligatoria": false,
+      "por_consejo": true,
+      "practica": 0,
+      "seriaciones": [
+        {
+          "otras": [
+            "equivalencia"
+          ]
+        }
+      ],
+      "teoria": 0,
+      "ubicacion": [
+        "ti"
+      ]
+    },
+    "1100918": {
+      "clave": "1100918",
+      "creditos": 9,
+      "nombre": "Optativa Técnica 18",
+      "obligatoria": false,
+      "por_consejo": true,
+      "practica": 0,
+      "seriaciones": [
+        {
+          "otras": [
+            "equivalencia"
+          ]
+        }
+      ],
+      "teoria": 0,
+      "ubicacion": [
+        "ti"
+      ]
+    },
+    "1100919": {
+      "clave": "1100919",
+      "creditos": 9,
+      "nombre": "Optativa Técnica 19",
+      "obligatoria": false,
+      "por_consejo": true,
+      "practica": 0,
+      "seriaciones": [
+        {
+          "otras": [
+            "equivalencia"
+          ]
+        }
+      ],
+      "teoria": 0,
+      "ubicacion": [
+        "ti"
+      ]
+    },
+    "1100920": {
+      "clave": "1100920",
+      "creditos": 9,
+      "nombre": "Optativa Técnica 20",
+      "obligatoria": false,
+      "por_consejo": true,
+      "practica": 0,
+      "seriaciones": [
+        {
+          "otras": [
+            "equivalencia"
+          ]
+        }
+      ],
+      "teoria": 0,
+      "ubicacion": [
+        "ti"
+      ]
+    },
+    "1100921": {
+      "clave": "1100921",
+      "creditos": 9,
+      "nombre": "Optativa Técnica 21",
+      "obligatoria": false,
+      "por_consejo": true,
+      "practica": 0,
+      "seriaciones": [
+        {
+          "otras": [
+            "equivalencia"
+          ]
+        }
+      ],
+      "teoria": 0,
+      "ubicacion": [
+        "ti"
+      ]
+    },
+    "1100922": {
+      "clave": "1100922",
+      "creditos": 9,
+      "nombre": "Optativa Técnica 22",
+      "obligatoria": false,
+      "por_consejo": true,
+      "practica": 0,
+      "seriaciones": [
+        {
+          "otras": [
+            "equivalencia"
+          ]
+        }
+      ],
+      "teoria": 0,
+      "ubicacion": [
+        "ti"
+      ]
+    },
+    "1100923": {
+      "clave": "1100923",
+      "creditos": 9,
+      "nombre": "Optativa Técnica 23",
+      "obligatoria": false,
+      "por_consejo": true,
+      "practica": 0,
+      "seriaciones": [
+        {
+          "otras": [
+            "equivalencia"
+          ]
+        }
+      ],
+      "teoria": 0,
+      "ubicacion": [
+        "ti"
+      ]
+    },
+    "1100924": {
+      "clave": "1100924",
+      "creditos": 9,
+      "nombre": "Optativa Técnica 24",
+      "obligatoria": false,
+      "por_consejo": true,
+      "practica": 0,
+      "seriaciones": [
+        {
+          "otras": [
+            "equivalencia"
+          ]
+        }
+      ],
+      "teoria": 0,
+      "ubicacion": [
+        "ti"
+      ]
+    },
+    "1100925": {
+      "clave": "1100925",
+      "creditos": 9,
+      "nombre": "Optativa Técnica 25",
+      "obligatoria": false,
+      "por_consejo": true,
+      "practica": 0,
+      "seriaciones": [
+        {
+          "otras": [
+            "equivalencia"
+          ]
+        }
+      ],
+      "teoria": 0,
+      "ubicacion": [
+        "ti"
+      ]
+    },
+    "1100926": {
+      "clave": "1100926",
+      "creditos": 9,
+      "nombre": "Optativa Técnica 26",
+      "obligatoria": false,
+      "por_consejo": true,
+      "practica": 0,
+      "seriaciones": [
+        {
+          "otras": [
+            "equivalencia"
+          ]
+        }
+      ],
+      "teoria": 0,
+      "ubicacion": [
+        "ti"
+      ]
+    },
+    "1100928": {
+      "clave": "1100928",
+      "creditos": 9,
+      "nombre": "Optativa Técnica 28",
+      "obligatoria": false,
+      "por_consejo": true,
+      "practica": 0,
+      "seriaciones": [
+        {
+          "otras": [
+            "equivalencia"
+          ]
+        }
+      ],
+      "teoria": 0,
+      "ubicacion": [
+        "ti"
+      ]
+    },
+    "1100938": {
+      "clave": "1100938",
+      "creditos": 3,
+      "nombre": "Optativa Inter y Multidisciplinar I",
+      "obligatoria": false,
+      "por_consejo": true,
+      "practica": 0,
+      "seriaciones": [
+        {
+          "otras": [
+            "equivalencia"
+          ]
+        }
+      ],
+      "teoria": 0,
+      "ubicacion": [
+        "tim"
+      ]
+    },
+    "1100940": {
+      "clave": "1100940",
+      "creditos": 6,
+      "nombre": "Optativa Inter y Multidisciplinar III",
+      "obligatoria": false,
+      "por_consejo": true,
+      "practica": 0,
+      "seriaciones": [
+        {
+          "otras": [
+            "equivalencia"
+          ]
+        }
+      ],
+      "teoria": 0,
+      "ubicacion": [
+        "tim"
+      ]
+    },
+    "1100941": {
+      "clave": "1100941",
+      "creditos": 6,
+      "nombre": "Optativa Inter y Multidisciplinar IV",
+      "obligatoria": false,
+      "por_consejo": true,
+      "practica": 0,
+      "seriaciones": [
+        {
+          "otras": [
+            "equivalencia"
+          ]
+        }
+      ],
+      "teoria": 0,
+      "ubicacion": [
+        "tim"
+      ]
+    },
+    "1110003": {
+      "clave": "1110003",
+      "creditos": 18,
+      "nombre": "Prácticas Profesionales en Ingeniería Física",
+      "obligatoria": false,
+      "practica": 18,
+      "seriaciones": [
+        {
+          "creditos": [
+            {
+              "numero": 320,
+              "ubicacion": []
+            }
+          ],
+          "otras": [
+            "autorizacion"
+          ]
+        }
+      ],
+      "teoria": 0,
+      "ubicacion": [
+        "ti",
+        "1"
+      ]
+    },
+    "1111013": {
+      "clave": "1111013",
+      "creditos": 9,
+      "nombre": "Dinámica Aplicada",
+      "obligatoria": true,
+      "practica": 0,
+      "seriaciones": [
+        {
+          "ueas": [
+            {
+              "clave": "1111081",
+              "coseriada": false
+            },
+            {
+              "clave": "1112005",
+              "coseriada": false
+            },
+            {
+              "clave": "1112030",
+              "coseriada": false
+            }
+          ]
+        }
+      ],
+      "teoria": 4.5,
+      "trimestre": 6,
+      "ubicacion": [
+        "tbp"
+      ]
+    },
+    "1111019": {
+      "clave": "1111019",
+      "creditos": 9,
+      "nombre": "Mecánica Estadística",
+      "obligatoria": true,
+      "practica": 0,
+      "seriaciones": [
+        {
+          "ueas": [
+            {
+              "clave": "1137007",
+              "coseriada": false
+            }
+          ]
+        }
+      ],
+      "teoria": 4.5,
+      "trimestre": 8,
+      "ubicacion": [
+        "tbp"
+      ]
+    },
+    "1111032": {
+      "clave": "1111032",
+      "creditos": 9,
+      "nombre": "Física del Estado Sólido",
+      "obligatoria": false,
+      "practica": 0,
+      "seriaciones": [
+        {
+          "ueas": [
+            {
+              "clave": "1111048",
+              "coseriada": false
+            }
+          ]
+        }
+      ],
+      "teoria": 4.5,
+      "ubicacion": [
+        "ti",
+        "0"
+      ]
+    },
+    "1111034": {
+      "clave": "1111034",
+      "creditos": 9,
+      "nombre": "Propiedades Eléctricas y Magnéticas de los Materiales",
+      "obligatoria": false,
+      "practica": 0,
+      "seriaciones": [
+        {
+          "ueas": [
+            {
+              "clave": "1111043",
+              "coseriada": false
+            }
+          ]
+        }
+      ],
+      "teoria": 4.5,
+      "ubicacion": [
+        "ti",
+        "0"
+      ]
+    },
+    "1111043": {
+      "clave": "1111043",
+      "creditos": 9,
+      "nombre": "Electromagnetismo",
+      "obligatoria": true,
+      "practica": 0,
+      "seriaciones": [
+        {
+          "ueas": [
+            {
+              "clave": "1111090",
+              "coseriada": false
+            },
+            {
+              "clave": "1111091",
+              "coseriada": false
+            }
+          ]
+        }
+      ],
+      "teoria": 4.5,
+      "trimestre": 9,
+      "ubicacion": [
+        "tbp"
+      ]
+    },
+    "1111044": {
+      "clave": "1111044",
+      "creditos": 9,
+      "nombre": "Aplicaciones del Electromagnetismo",
+      "obligatoria": true,
+      "practica": 0,
+      "seriaciones": [
+        {
+          "ueas": [
+            {
+              "clave": "1111043",
+              "coseriada": false
+            }
+          ]
+        }
+      ],
+      "teoria": 4.5,
+      "trimestre": 11,
+      "ubicacion": [
+        "tbp"
+      ]
+    },
+    "1111045": {
+      "clave": "1111045",
+      "creditos": 9,
+      "nombre": "Estática del Cuerpo Deformable",
+      "obligatoria": false,
+      "practica": 0,
+      "seriaciones": [
+        {
+          "ueas": [
+            {
+              "clave": "1111081",
+              "coseriada": false
+            },
+            {
+              "clave": "1112005",
+              "coseriada": false
+            }
+          ]
+        }
+      ],
+      "teoria": 4.5,
+      "ubicacion": [
+        "ti",
+        "0"
+      ]
+    },
+    "1111048": {
+      "clave": "1111048",
+      "creditos": 9,
+      "nombre": "Física Moderna",
+      "obligatoria": true,
+      "practica": 0,
+      "seriaciones": [
+        {
+          "ueas": [
+            {
+              "clave": "1111090",
+              "coseriada": false
+            },
+            {
+              "clave": "1111091",
+              "coseriada": false
+            }
+          ]
+        }
+      ],
+      "teoria": 4.5,
+      "trimestre": 9,
+      "ubicacion": [
+        "tbp"
+      ]
+    },
+    "1111052": {
+      "clave": "1111052",
+      "creditos": 9,
+      "nombre": "Temas Selectos de Ingeniería Física",
+      "obligatoria": false,
+      "practica": 0,
+      "seriaciones": [
+        {
+          "creditos": [
+            {
+              "numero": 300,
+              "ubicacion": []
+            }
+          ]
+        }
+      ],
+      "teoria": 4.5,
+      "ubicacion": [
+        "ti",
+        "1"
+      ]
+    },
+    "1111053": {
+      "clave": "1111053",
+      "creditos": 9,
+      "nombre": "Acústica",
+      "obligatoria": false,
+      "practica": 3,
+      "seriaciones": [
+        {
+          "ueas": [
+            {
+              "clave": "1111090",
+              "coseriada": false
+            }
+          ]
+        }
+      ],
+      "teoria": 3,
+      "ubicacion": [
+        "ti",
+        "1"
+      ]
+    },
+    "1111054": {
+      "clave": "1111054",
+      "creditos": 9,
+      "nombre": "Sensores, Transductores y Detectores",
+      "obligatoria": false,
+      "practica": 3,
+      "seriaciones": [
+        {
+          "ueas": [
+            {
+              "clave": "1123055",
+              "coseriada": false
+            },
+            {
+              "clave": "1123056",
+              "coseriada": false
+            }
+          ]
+        }
+      ],
+      "teoria": 3,
+      "ubicacion": [
+        "ti",
+        "0"
+      ]
+    },
+    "1111055": {
+      "clave": "1111055",
+      "creditos": 9,
+      "nombre": "Óptica",
+      "obligatoria": true,
+      "practica": 0,
+      "seriaciones": [
+        {
+          "ueas": [
+            {
+              "clave": "1111090",
+              "coseriada": false
+            }
+          ]
+        }
+      ],
+      "teoria": 4.5,
+      "trimestre": 8,
+      "ubicacion": [
+        "tbp"
+      ]
+    },
+    "1111057": {
+      "clave": "1111057",
+      "creditos": 9,
+      "nombre": "Imágenes",
+      "obligatoria": false,
+      "practica": 3,
+      "seriaciones": [
+        {
+          "ueas": [
+            {
+              "clave": "1111055",
+              "coseriada": false
+            }
+          ]
+        }
+      ],
+      "teoria": 3,
+      "ubicacion": [
+        "ti",
+        "1"
+      ]
+    },
+    "1111058": {
+      "clave": "1111058",
+      "creditos": 9,
+      "nombre": "Instrumentación y Equipo II",
+      "obligatoria": false,
+      "practica": 3,
+      "seriaciones": [
+        {
+          "ueas": [
+            {
+              "clave": "1123016",
+              "coseriada": false
+            }
+          ]
+        }
+      ],
+      "teoria": 3,
+      "ubicacion": [
+        "ti",
+        "0"
+      ]
+    },
+    "1111059": {
+      "clave": "1111059",
+      "creditos": 9,
+      "nombre": "Ingeniería Óptica",
+      "obligatoria": false,
+      "practica": 3,
+      "seriaciones": [
+        {
+          "ueas": [
+            {
+              "clave": "1111055",
+              "coseriada": false
+            }
+          ]
+        }
+      ],
+      "teoria": 3,
+      "ubicacion": [
+        "ti",
+        "1"
+      ]
+    },
+    "1111060": {
+      "clave": "1111060",
+      "creditos": 9,
+      "nombre": "Principios de Diseño y Construcción de Equipos e Instrumentos",
+      "obligatoria": false,
+      "practica": 3,
+      "seriaciones": [
+        {
+          "ueas": [
+            {
+              "clave": "1123016",
+              "coseriada": false
+            }
+          ]
+        }
+      ],
+      "teoria": 3,
+      "ubicacion": [
+        "ti",
+        "0"
+      ]
+    },
+    "1111066": {
+      "clave": "1111066",
+      "creditos": 9,
+      "nombre": "Temas Selectos de Ingeniería Física II",
+      "obligatoria": false,
+      "practica": 0,
+      "seriaciones": [
+        {
+          "creditos": [
+            {
+              "numero": 300,
+              "ubicacion": []
+            }
+          ]
+        }
+      ],
+      "teoria": 4.5,
+      "ubicacion": [
+        "ti",
+        "1"
+      ]
+    },
+    "1111067": {
+      "clave": "1111067",
+      "creditos": 9,
+      "nombre": "Temas Selectos de Ingeniería Física III",
+      "obligatoria": false,
+      "practica": 0,
+      "seriaciones": [
+        {
+          "creditos": [
+            {
+              "numero": 300,
+              "ubicacion": []
+            }
+          ]
+        }
+      ],
+      "teoria": 4.5,
+      "ubicacion": [
+        "ti",
+        "1"
+      ]
+    },
+    "1111069": {
+      "clave": "1111069",
+      "creditos": 3,
+      "nombre": "Laboratorio de Óptica",
+      "obligatoria": true,
+      "practica": 3,
+      "seriaciones": [
+        {
+          "ueas": [
+            {
+              "clave": "1111055",
+              "coseriada": true
+            }
+          ]
+        }
+      ],
+      "teoria": 0,
+      "trimestre": 10,
+      "ubicacion": [
+        "tbp"
+      ]
+    },
+    "1111070": {
+      "clave": "1111070",
+      "creditos": 6,
+      "nombre": "Laboratorio Interdisciplinario",
+      "obligatoria": false,
+      "practica": 6,
+      "seriaciones": [
+        {
+          "creditos": [
+            {
+              "numero": 280,
+              "ubicacion": []
+            }
+          ],
+          "otras": [
+            "autorizacion"
+          ]
+        }
+      ],
+      "teoria": 0,
+      "ubicacion": [
+        "ti",
+        "1"
+      ]
+    },
+    "1111078": {
+      "clave": "1111078",
+      "creditos": 4,
+      "nombre": "Introducción a la Física",
+      "obligatoria": true,
+      "practica": 4,
+      "seriaciones": [
+        {}
+      ],
+      "teoria": 0,
+      "trimestre": 1,
+      "ubicacion": [
+        "tna"
+      ]
+    },
+    "1111079": {
+      "clave": "1111079",
+      "creditos": 9,
+      "nombre": "Cinemática y Dinámica de Partículas",
+      "obligatoria": true,
+      "practica": 0,
+      "seriaciones": [
+        {
+          "ueas": [
+            {
+              "clave": "1111078",
+              "coseriada": false
+            },
+            {
+              "clave": "1112042",
+              "coseriada": true
+            }
+          ]
+        }
+      ],
+      "teoria": 4.5,
+      "trimestre": 2,
+      "ubicacion": [
+        "tg"
+      ]
+    },
+    "1111081": {
+      "clave": "1111081",
+      "creditos": 9,
+      "nombre": "Dinámica del Cuerpo Rígido",
+      "obligatoria": true,
+      "practica": 0,
+      "seriaciones": [
+        {
+          "ueas": [
+            {
+              "clave": "1111079",
+              "coseriada": false
+            },
+            {
+              "clave": "1112043",
+              "coseriada": true
+            }
+          ]
+        }
+      ],
+      "teoria": 4.5,
+      "trimestre": 3,
+      "ubicacion": [
+        "tg"
+      ]
+    },
+    "1111083": {
+      "clave": "1111083",
+      "creditos": 9,
+      "nombre": "Introducción a la Electrostática y Magnetostática",
+      "obligatoria": true,
+      "practica": 0,
+      "seriaciones": [
+        {
+          "ueas": [
+            {
+              "clave": "1111081",
+              "coseriada": false
+            },
+            {
+              "clave": "1112029",
+              "coseriada": true
+            }
+          ]
+        }
+      ],
+      "teoria": 4.5,
+      "trimestre": 6,
+      "ubicacion": [
+        "tg"
+      ]
+    },
+    "1111085": {
+      "clave": "1111085",
+      "creditos": 9,
+      "nombre": "Análisis Vectorial",
+      "obligatoria": true,
+      "practica": 0,
+      "seriaciones": [
+        {
+          "ueas": [
+            {
+              "clave": "1112005",
+              "coseriada": false
+            }
+          ]
+        }
+      ],
+      "teoria": 4.5,
+      "trimestre": 5,
+      "ubicacion": [
+        "tbp"
+      ]
+    },
+    "1111087": {
+      "clave": "1111087",
+      "creditos": 3,
+      "nombre": "Laboratorio de Física Moderna",
+      "obligatoria": true,
+      "practica": 3,
+      "seriaciones": [
+        {
+          "ueas": [
+            {
+              "clave": "1111048",
+              "coseriada": true
+            }
+          ]
+        }
+      ],
+      "teoria": 0,
+      "trimestre": 11,
+      "ubicacion": [
+        "tbp"
+      ]
+    },
+    "1111088": {
+      "clave": "1111088",
+      "creditos": 3,
+      "nombre": "Laboratorio de Física Atómica y Molecular",
+      "obligatoria": true,
+      "practica": 3,
+      "seriaciones": [
+        {
+          "ueas": [
+            {
+              "clave": "1111048",
+              "coseriada": false
+            }
+          ]
+        }
+      ],
+      "teoria": 0,
+      "trimestre": 10,
+      "ubicacion": [
+        "tbp"
+      ]
+    },
+    "1111090": {
+      "clave": "1111090",
+      "creditos": 9,
+      "nombre": "Inducción y Ondas Electromagnéticas",
+      "obligatoria": true,
+      "practica": 0,
+      "seriaciones": [
+        {
+          "ueas": [
+            {
+              "clave": "1111083",
+              "coseriada": false
+            },
+            {
+              "clave": "1112030",
+              "coseriada": false
+            }
+          ]
+        }
+      ],
+      "teoria": 4.5,
+      "trimestre": 7,
+      "ubicacion": [
+        "tbp"
+      ]
+    },
+    "1111091": {
+      "clave": "1111091",
+      "creditos": 9,
+      "nombre": "Funciones Especiales",
+      "obligatoria": true,
+      "practica": 0,
+      "seriaciones": [
+        {
+          "ueas": [
+            {
+              "clave": "1111085",
+              "coseriada": false
+            },
+            {
+              "clave": "1112015",
+              "coseriada": false
+            }
+          ]
+        }
+      ],
+      "teoria": 4.5,
+      "trimestre": 8,
+      "ubicacion": [
+        "tbp"
+      ]
+    },
+    "1111092": {
+      "clave": "1111092",
+      "creditos": 3,
+      "nombre": "Laboratorio de Movimiento de una Partícula",
+      "obligatoria": true,
+      "practica": 3,
+      "seriaciones": [
+        {
+          "ueas": [
+            {
+              "clave": "1111079",
+              "coseriada": false
+            }
+          ]
+        }
+      ],
+      "teoria": 0,
+      "trimestre": 5,
+      "ubicacion": [
+        "tg"
+      ]
+    },
+    "1111093": {
+      "clave": "1111093",
+      "creditos": 3,
+      "nombre": "Laboratorio del Cuerpo Rígido y Oscilaciones",
+      "obligatoria": true,
+      "practica": 3,
+      "seriaciones": [
+        {
+          "ueas": [
+            {
+              "clave": "1111081",
+              "coseriada": false
+            },
+            {
+              "clave": "1111092",
+              "coseriada": false
+            }
+          ]
+        }
+      ],
+      "teoria": 0,
+      "trimestre": 6,
+      "ubicacion": [
+        "tg"
+      ]
+    },
+    "1111094": {
+      "clave": "1111094",
+      "creditos": 3,
+      "nombre": "Laboratorio de Electricidad y Magnetismo",
+      "obligatoria": true,
+      "practica": 3,
+      "seriaciones": [
+        {
+          "ueas": [
+            {
+              "clave": "1111093",
+              "coseriada": false
+            },
+            {
+              "clave": "1111090",
+              "coseriada": true
+            }
+          ]
+        }
+      ],
+      "teoria": 0,
+      "trimestre": 9,
+      "ubicacion": [
+        "tbp"
+      ]
+    },
+    "1111095": {
+      "clave": "1111095",
+      "creditos": 9,
+      "nombre": "Optoelectrónica",
+      "obligatoria": false,
+      "practica": 3,
+      "seriaciones": [
+        {
+          "ueas": [
+            {
+              "clave": "1111055",
+              "coseriada": false
+            }
+          ]
+        }
+      ],
+      "teoria": 3,
+      "ubicacion": [
+        "ti",
+        "1"
+      ]
+    },
+    "1112005": {
+      "clave": "1112005",
+      "creditos": 12,
+      "nombre": "Cálculo de Varias Variables",
+      "obligatoria": true,
+      "practica": 3,
+      "seriaciones": [
+        {
+          "ueas": [
+            {
+              "clave": "1112029",
+              "coseriada": false
+            },
+            {
+              "clave": "1112013",
+              "coseriada": false
+            }
+          ]
+        }
+      ],
+      "teoria": 4.5,
+      "trimestre": 4,
+      "ubicacion": [
+        "tbp"
+      ]
+    },
+    "1112013": {
+      "clave": "1112013",
+      "creditos": 9,
+      "nombre": "Complementos de Matemáticas",
+      "obligatoria": true,
+      "practica": 0,
+      "seriaciones": [
+        {}
+      ],
+      "teoria": 4.5,
+      "trimestre": 1,
+      "ubicacion": [
+        "tg"
+      ]
+    },
+    "1112015": {
+      "clave": "1112015",
+      "creditos": 9,
+      "nombre": "Matemáticas Aplicadas para Ingeniería",
+      "obligatoria": true,
+      "practica": 0,
+      "seriaciones": [
+        {
+          "ueas": [
+            {
+              "clave": "1112030",
+              "coseriada": false
+            }
+          ]
+        }
+      ],
+      "teoria": 4.5,
+      "trimestre": 5,
+      "ubicacion": [
+        "tbp"
+      ]
+    },
+    "1112016": {
+      "clave": "1112016",
+      "creditos": 6,
+      "nombre": "Variable Compleja",
+      "obligatoria": true,
+      "practica": 0,
+      "seriaciones": [
+        {
+          "ueas": [
+            {
+              "clave": "1112005",
+              "coseriada": false
+            }
+          ]
+        }
+      ],
+      "teoria": 3,
+      "trimestre": 7,
+      "ubicacion": [
+        "tbp"
+      ]
+    },
+    "1112017": {
+      "clave": "1112017",
+      "creditos": 9,
+      "nombre": "Introducción al Álgebra Lineal",
+      "obligatoria": false,
+      "practica": 0,
+      "seriaciones": [
+        {
+          "ueas": [
+            {
+              "clave": "1151038",
+              "coseriada": false
+            }
+          ]
+        }
+      ],
+      "teoria": 4.5,
+      "ubicacion": [
+        "ti",
+        "1"
+      ]
+    },
+    "1112029": {
+      "clave": "1112029",
+      "creditos": 9,
+      "nombre": "Cálculo Integral",
+      "obligatoria": true,
+      "practica": 3,
+      "seriaciones": [
+        {
+          "ueas": [
+            {
+              "clave": "1112043",
+              "coseriada": false
+            }
+          ]
+        }
+      ],
+      "teoria": 3,
+      "trimestre": 3,
+      "ubicacion": [
+        "tg"
+      ]
+    },
+    "1112030": {
+      "clave": "1112030",
+      "creditos": 9,
+      "nombre": "Ecuaciones Diferenciales Ordinarias",
+      "obligatoria": true,
+      "practica": 0,
+      "seriaciones": [
+        {
+          "ueas": [
+            {
+              "clave": "1112029",
+              "coseriada": false
+            }
+          ]
+        }
+      ],
+      "teoria": 4.5,
+      "trimestre": 4,
+      "ubicacion": [
+        "tg"
+      ]
+    },
+    "1112042": {
+      "clave": "1112042",
+      "creditos": 11,
+      "nombre": "Introducción al Cálculo",
+      "obligatoria": true,
+      "practica": 4,
+      "seriaciones": [
+        {}
+      ],
+      "teoria": 3.5,
+      "trimestre": 1,
+      "ubicacion": [
+        "tg"
+      ]
+    },
+    "1112043": {
+      "clave": "1112043",
+      "creditos": 11,
+      "nombre": "Cálculo Diferencial",
+      "obligatoria": true,
+      "practica": 4,
+      "seriaciones": [
+        {
+          "ueas": [
+            {
+              "clave": "1112042",
+              "coseriada": false
+            }
+          ]
+        }
+      ],
+      "teoria": 3.5,
+      "trimestre": 2,
+      "ubicacion": [
+        "tg"
+      ]
+    },
+    "1113046": {
+      "clave": "1113046",
+      "creditos": 6,
+      "nombre": "Termodinámica",
+      "obligatoria": true,
+      "practica": 0,
+      "seriaciones": [
+        {
+          "ueas": [
+            {
+              "clave": "1112043",
+              "coseriada": true
+            },
+            {
+              "clave": "1111081",
+              "coseriada": true
+            }
+          ]
+        }
+      ],
+      "teoria": 3,
+      "trimestre": 4,
+      "ubicacion": [
+        "tg"
+      ]
+    },
+    "1113057": {
+      "clave": "1113057",
+      "creditos": 9,
+      "nombre": "Contaminación Ambiental",
+      "obligatoria": false,
+      "practica": 0,
+      "seriaciones": [
+        {
+          "ueas": [
+            {
+              "clave": "1113069",
+              "coseriada": false
+            },
+            {
+              "clave": "1113070",
+              "coseriada": false
+            }
+          ]
+        }
+      ],
+      "teoria": 4.5,
+      "ubicacion": [
+        "ti",
+        "1"
+      ]
+    },
+    "1113069": {
+      "clave": "1113069",
+      "creditos": 9,
+      "nombre": "Fisicoquímica de los Materiales",
+      "obligatoria": true,
+      "practica": 0,
+      "seriaciones": [
+        {
+          "ueas": [
+            {
+              "clave": "1113046",
+              "coseriada": false
+            }
+          ]
+        }
+      ],
+      "teoria": 4.5,
+      "trimestre": 7,
+      "ubicacion": [
+        "tbp"
+      ]
+    },
+    "1113070": {
+      "clave": "1113070",
+      "creditos": 3,
+      "nombre": "Laboratorio de Fisicoquímica de los Materiales",
+      "obligatoria": true,
+      "practica": 3,
+      "seriaciones": [
+        {
+          "ueas": [
+            {
+              "clave": "1113069",
+              "coseriada": true
+            }
+          ]
+        }
+      ],
+      "teoria": 0,
+      "trimestre": 10,
+      "ubicacion": [
+        "tbp"
+      ]
+    },
+    "1113071": {
+      "clave": "1113071",
+      "creditos": 9,
+      "nombre": "Química Física Aplicada",
+      "obligatoria": false,
+      "practica": 0,
+      "seriaciones": [
+        {
+          "creditos": [
+            {
+              "numero": 300,
+              "ubicacion": []
+            }
+          ]
+        }
+      ],
+      "teoria": 4.5,
+      "ubicacion": [
+        "ti",
+        "1"
+      ]
+    },
+    "1113084": {
+      "clave": "1113084",
+      "creditos": 9,
+      "nombre": "Estructura Atómica y Enlace Químico",
+      "obligatoria": true,
+      "practica": 0,
+      "seriaciones": [
+        {}
+      ],
+      "teoria": 4.5,
+      "trimestre": 1,
+      "ubicacion": [
+        "tg"
+      ]
+    },
+    "1113085": {
+      "clave": "1113085",
+      "creditos": 3,
+      "nombre": "Laboratorio de Reacciones Químicas",
+      "obligatoria": true,
+      "practica": 3,
+      "seriaciones": [
+        {
+          "ueas": [
+            {
+              "clave": "1113084",
+              "coseriada": true
+            }
+          ]
+        }
+      ],
+      "teoria": 0,
+      "trimestre": 1,
+      "ubicacion": [
+        "tg"
+      ]
+    },
+    "1113086": {
+      "clave": "1113086",
+      "creditos": 6,
+      "nombre": "Estructura y Propiedades de los Materiales en Ingeniería",
+      "obligatoria": true,
+      "practica": 0,
+      "seriaciones": [
+        {
+          "ueas": [
+            {
+              "clave": "1113084",
+              "coseriada": false
+            }
+          ]
+        }
+      ],
+      "teoria": 3,
+      "trimestre": 2,
+      "ubicacion": [
+        "tg"
+      ]
+    },
+    "1113087": {
+      "clave": "1113087",
+      "creditos": 3,
+      "nombre": "Laboratorio de Estructura y Propiedades de los Materiales",
+      "obligatoria": true,
+      "practica": 3,
+      "seriaciones": [
+        {
+          "ueas": [
+            {
+              "clave": "1113085",
+              "coseriada": false
+            },
+            {
+              "clave": "1113086",
+              "coseriada": true
+            }
+          ]
+        }
+      ],
+      "teoria": 0,
+      "trimestre": 3,
+      "ubicacion": [
+        "tg"
+      ]
+    },
+    "1121037": {
+      "clave": "1121037",
+      "creditos": 12,
+      "nombre": "Diseño Lógico",
+      "obligatoria": false,
+      "practica": 0,
+      "seriaciones": [
+        {
+          "ueas": [
+            {
+              "clave": "1151038",
+              "coseriada": false
+            }
+          ]
+        }
+      ],
+      "teoria": 6,
+      "ubicacion": [
+        "ti",
+        "0"
+      ]
+    },
+    "1121040": {
+      "clave": "1121040",
+      "creditos": 6,
+      "nombre": "Laboratorio de Diseño Lógico",
+      "obligatoria": false,
+      "practica": 6,
+      "seriaciones": [
+        {
+          "ueas": [
+            {
+              "clave": "1121037",
+              "coseriada": true
+            }
+          ]
+        }
+      ],
+      "teoria": 0,
+      "ubicacion": [
+        "ti",
+        "0"
+      ]
+    },
+    "1122012": {
+      "clave": "1122012",
+      "creditos": 9,
+      "nombre": "Procesamiento Digital de Señales",
+      "obligatoria": true,
+      "practica": 3,
+      "seriaciones": [
+        {
+          "ueas": [
+            {
+              "clave": "1112015",
+              "coseriada": false
+            }
+          ]
+        }
+      ],
+      "teoria": 3,
+      "trimestre": 8,
+      "ubicacion": [
+        "tbp"
+      ]
+    },
+    "1123016": {
+      "clave": "1123016",
+      "creditos": 9,
+      "nombre": "Instrumentación y Equipo I",
+      "obligatoria": false,
+      "practica": 3,
+      "seriaciones": [
+        {
+          "ueas": [
+            {
+              "clave": "1123055",
+              "coseriada": false
+            },
+            {
+              "clave": "1123056",
+              "coseriada": false
+            }
+          ]
+        }
+      ],
+      "teoria": 3,
+      "ubicacion": [
+        "ti",
+        "0"
+      ]
+    },
+    "1123021": {
+      "clave": "1123021",
+      "creditos": 9,
+      "nombre": "Microcontroladores",
+      "obligatoria": false,
+      "practica": 3,
+      "seriaciones": [
+        {
+          "ueas": [
+            {
+              "clave": "1121037",
+              "coseriada": false
+            }
+          ]
+        }
+      ],
+      "teoria": 3,
+      "ubicacion": [
+        "ti",
+        "0"
+      ]
+    },
+    "1123034": {
+      "clave": "1123034",
+      "creditos": 3,
+      "nombre": "Laboratorio de Electrónica de Potencia",
+      "obligatoria": false,
+      "practica": 3,
+      "seriaciones": [
+        {
+          "ueas": [
+            {
+              "clave": "1123044",
+              "coseriada": true
+            }
+          ]
+        }
+      ],
+      "teoria": 0,
+      "ubicacion": [
+        "ti",
+        "0"
+      ]
+    },
+    "1123040": {
+      "clave": "1123040",
+      "creditos": 9,
+      "nombre": "Circuitos Electrónicos I",
+      "obligatoria": false,
+      "practica": 0,
+      "seriaciones": [
+        {
+          "ueas": [
+            {
+              "clave": "1124001",
+              "coseriada": false
+            },
+            {
+              "clave": "1124005",
+              "coseriada": false
+            }
+          ]
+        }
+      ],
+      "teoria": 4.5,
+      "ubicacion": [
+        "ti",
+        "0"
+      ]
+    },
+    "1123041": {
+      "clave": "1123041",
+      "creditos": 9,
+      "nombre": "Circuitos Electrónicos II",
+      "obligatoria": false,
+      "practica": 0,
+      "seriaciones": [
+        {
+          "ueas": [
+            {
+              "clave": "1123040",
+              "coseriada": false
+            },
+            {
+              "clave": "1123045",
+              "coseriada": false
+            }
+          ]
+        }
+      ],
+      "teoria": 4.5,
+      "ubicacion": [
+        "ti",
+        "0"
+      ]
+    },
+    "1123043": {
+      "clave": "1123043",
+      "creditos": 9,
+      "nombre": "Diseño de Sistemas Electrónicos",
+      "obligatoria": false,
+      "practica": 0,
+      "seriaciones": [
+        {
+          "ueas": [
+            {
+              "clave": "1123021",
+              "coseriada": false
+            },
+            {
+              "clave": "1123041",
+              "coseriada": false
+            },
+            {
+              "clave": "1123046",
+              "coseriada": false
+            }
+          ]
+        }
+      ],
+      "teoria": 4.5,
+      "ubicacion": [
+        "ti",
+        "0"
+      ]
+    },
+    "1123044": {
+      "clave": "1123044",
+      "creditos": 9,
+      "nombre": "Electrónica de Potencia",
+      "obligatoria": false,
+      "practica": 0,
+      "seriaciones": [
+        {
+          "ueas": [
+            {
+              "clave": "1123041",
+              "coseriada": false
+            },
+            {
+              "clave": "1124003",
+              "coseriada": false
+            }
+          ]
+        }
+      ],
+      "teoria": 4.5,
+      "ubicacion": [
+        "ti",
+        "0"
+      ]
+    },
+    "1123045": {
+      "clave": "1123045",
+      "creditos": 3,
+      "nombre": "Laboratorio de Circuitos Electrónicos I",
+      "obligatoria": false,
+      "practica": 3,
+      "seriaciones": [
+        {
+          "ueas": [
+            {
+              "clave": "1123040",
+              "coseriada": true
+            }
+          ]
+        }
+      ],
+      "teoria": 0,
+      "ubicacion": [
+        "ti",
+        "0"
+      ]
+    },
+    "1123046": {
+      "clave": "1123046",
+      "creditos": 3,
+      "nombre": "Laboratorio de Circuitos Electrónicos II",
+      "obligatoria": false,
+      "practica": 3,
+      "seriaciones": [
+        {
+          "ueas": [
+            {
+              "clave": "1123041",
+              "coseriada": true
+            }
+          ]
+        }
+      ],
+      "teoria": 0,
+      "ubicacion": [
+        "ti",
+        "0"
+      ]
+    },
+    "1123055": {
+      "clave": "1123055",
+      "creditos": 9,
+      "nombre": "Introducción a la Electrónica",
+      "obligatoria": false,
+      "practica": 0,
+      "seriaciones": [
+        {
+          "ueas": [
+            {
+              "clave": "1124001",
+              "coseriada": false
+            },
+            {
+              "clave": "1124005",
+              "coseriada": false
+            }
+          ]
+        }
+      ],
+      "teoria": 4.5,
+      "ubicacion": [
+        "ti",
+        "0"
+      ]
+    },
+    "1123056": {
+      "clave": "1123056",
+      "creditos": 3,
+      "nombre": "Laboratorio de Introducción a la Electrónica",
+      "obligatoria": false,
+      "practica": 3,
+      "seriaciones": [
+        {
+          "ueas": [
+            {
+              "clave": "1123055",
+              "coseriada": true
+            }
+          ]
+        }
+      ],
+      "teoria": 0,
+      "ubicacion": [
+        "ti",
+        "0"
+      ]
+    },
+    "1124001": {
+      "clave": "1124001",
+      "creditos": 9,
+      "nombre": "Circuitos Eléctricos I",
+      "obligatoria": true,
+      "practica": 0,
+      "seriaciones": [
+        {
+          "ueas": [
+            {
+              "clave": "1112030",
+              "coseriada": true
+            }
+          ]
+        }
+      ],
+      "teoria": 4.5,
+      "trimestre": 7,
+      "ubicacion": [
+        "tbp"
+      ]
+    },
+    "1124003": {
+      "clave": "1124003",
+      "creditos": 9,
+      "nombre": "Circuitos Eléctricos II",
+      "obligatoria": false,
+      "practica": 0,
+      "seriaciones": [
+        {
+          "ueas": [
+            {
+              "clave": "1124001",
+              "coseriada": false
+            },
+            {
+              "clave": "1112015",
+              "coseriada": false
+            }
+          ]
+        }
+      ],
+      "teoria": 4.5,
+      "ubicacion": [
+        "ti",
+        "0"
+      ]
+    },
+    "1124005": {
+      "clave": "1124005",
+      "creditos": 3,
+      "nombre": "Laboratorio de Circuitos Eléctricos I",
+      "obligatoria": true,
+      "practica": 3,
+      "seriaciones": [
+        {
+          "ueas": [
+            {
+              "clave": "1124001",
+              "coseriada": true
+            }
+          ]
+        }
+      ],
+      "teoria": 0,
+      "trimestre": 7,
+      "ubicacion": [
+        "tbp"
+      ]
+    },
+    "1124049": {
+      "clave": "1124049",
+      "creditos": 3,
+      "nombre": "Laboratorio de Control",
+      "obligatoria": false,
+      "practica": 3,
+      "seriaciones": [
+        {
+          "ueas": [
+            {
+              "clave": "1124050",
+              "coseriada": true
+            }
+          ]
+        }
+      ],
+      "teoria": 0,
+      "ubicacion": [
+        "ti",
+        "1"
+      ]
+    },
+    "1124050": {
+      "clave": "1124050",
+      "creditos": 9,
+      "nombre": "Teoría de Control",
+      "obligatoria": false,
+      "practica": 0,
+      "seriaciones": [
+        {
+          "ueas": [
+            {
+              "clave": "1124003",
+              "coseriada": false
+            }
+          ]
+        }
+      ],
+      "teoria": 4.5,
+      "ubicacion": [
+        "ti",
+        "1"
+      ]
+    },
+    "1131065": {
+      "clave": "1131065",
+      "creditos": 9,
+      "nombre": "Energía Solar Fotovoltaica",
+      "obligatoria": false,
+      "practica": 0,
+      "seriaciones": [
+        {
+          "creditos": [
+            {
+              "numero": 250,
+              "ubicacion": []
+            }
+          ],
+          "ueas": [
+            {
+              "clave": "1151039",
+              "coseriada": false
+            }
+          ]
+        }
+      ],
+      "teoria": 4.5,
+      "ubicacion": [
+        "ti",
+        "0"
+      ]
+    },
+    "1131068": {
+      "clave": "1131068",
+      "creditos": 9,
+      "nombre": "Temas Selectos de Ingeniería Eléctrica I",
+      "obligatoria": false,
+      "practica": 0,
+      "seriaciones": [
+        {
+          "creditos": [
+            {
+              "numero": 300,
+              "ubicacion": []
+            }
+          ]
+        }
+      ],
+      "teoria": 4.5,
+      "ubicacion": [
+        "ti",
+        "1"
+      ]
+    },
+    "1131070": {
+      "clave": "1131070",
+      "creditos": 9,
+      "nombre": "Circuitos Eléctricos de Corriente Alterna",
+      "obligatoria": false,
+      "practica": 0,
+      "seriaciones": [
+        {
+          "ueas": [
+            {
+              "clave": "1124001",
+              "coseriada": false
+            },
+            {
+              "clave": "1124005",
+              "coseriada": false
+            }
+          ]
+        }
+      ],
+      "teoria": 4.5,
+      "ubicacion": [
+        "ti",
+        "0"
+      ]
+    },
+    "1131071": {
+      "clave": "1131071",
+      "creditos": 3,
+      "nombre": "Laboratorio de Circuitos Eléctricos de Corriente Alterna",
+      "obligatoria": false,
+      "practica": 3,
+      "seriaciones": [
+        {
+          "ueas": [
+            {
+              "clave": "1131070",
+              "coseriada": true
+            }
+          ]
+        }
+      ],
+      "teoria": 0,
+      "ubicacion": [
+        "ti",
+        "0"
+      ]
+    },
+    "1132026": {
+      "clave": "1132026",
+      "creditos": 9,
+      "nombre": "Transferencia de Calor",
+      "obligatoria": false,
+      "practica": 0,
+      "seriaciones": [
+        {
+          "ueas": [
+            {
+              "clave": "1112030",
+              "coseriada": false
+            },
+            {
+              "clave": "1137006",
+              "coseriada": false
+            }
+          ]
+        }
+      ],
+      "teoria": 4.5,
+      "ubicacion": [
+        "ti",
+        "0"
+      ]
+    },
+    "1132029": {
+      "clave": "1132029",
+      "creditos": 6,
+      "nombre": "Dispositivos Hidroneumáticos",
+      "obligatoria": false,
+      "practica": 0,
+      "seriaciones": [
+        {
+          "ueas": [
+            {
+              "clave": "1137005",
+              "coseriada": false
+            }
+          ]
+        }
+      ],
+      "teoria": 3,
+      "ubicacion": [
+        "ti",
+        "0"
+      ]
+    },
+    "1132030": {
+      "clave": "1132030",
+      "creditos": 3,
+      "nombre": "Taller de Dispositivos Hidroneumáticos",
+      "obligatoria": false,
+      "practica": 3,
+      "seriaciones": [
+        {
+          "ueas": [
+            {
+              "clave": "1132029",
+              "coseriada": true
+            }
+          ]
+        }
+      ],
+      "teoria": 0,
+      "ubicacion": [
+        "ti",
+        "0"
+      ]
+    },
+    "1132040": {
+      "clave": "1132040",
+      "creditos": 9,
+      "nombre": "Transferencia de Masa",
+      "obligatoria": false,
+      "practica": 0,
+      "seriaciones": [
+        {
+          "ueas": [
+            {
+              "clave": "1137005",
+              "coseriada": false
+            }
+          ]
+        }
+      ],
+      "teoria": 4.5,
+      "ubicacion": [
+        "ti",
+        "1"
+      ]
+    },
+    "1132041": {
+      "clave": "1132041",
+      "creditos": 3,
+      "nombre": "Taller de Instalaciones Industriales",
+      "obligatoria": false,
+      "practica": 3,
+      "seriaciones": [
+        {
+          "ueas": [
+            {
+              "clave": "1137015",
+              "coseriada": true
+            }
+          ]
+        }
+      ],
+      "teoria": 0,
+      "ubicacion": [
+        "ti",
+        "0"
+      ]
+    },
+    "1132042": {
+      "clave": "1132042",
+      "creditos": 9,
+      "nombre": "Cambiadores de Calor",
+      "obligatoria": false,
+      "practica": 0,
+      "seriaciones": [
+        {
+          "ueas": [
+            {
+              "clave": "1132026",
+              "coseriada": false
+            }
+          ]
+        }
+      ],
+      "teoria": 4.5,
+      "ubicacion": [
+        "ti",
+        "0"
+      ]
+    },
+    "1132048": {
+      "clave": "1132048",
+      "creditos": 9,
+      "nombre": "Turbomaquinaria",
+      "obligatoria": false,
+      "practica": 0,
+      "seriaciones": [
+        {
+          "ueas": [
+            {
+              "clave": "1137005",
+              "coseriada": false
+            },
+            {
+              "clave": "1137006",
+              "coseriada": false
+            }
+          ]
+        }
+      ],
+      "teoria": 4.5,
+      "ubicacion": [
+        "ti",
+        "0"
+      ]
+    },
+    "1132049": {
+      "clave": "1132049",
+      "creditos": 9,
+      "nombre": "Combustión",
+      "obligatoria": false,
+      "practica": 0,
+      "seriaciones": [
+        {
+          "creditos": [
+            {
+              "numero": 300,
+              "ubicacion": []
+            }
+          ],
+          "ueas": [
+            {
+              "clave": "1137005",
+              "coseriada": false
+            },
+            {
+              "clave": "1137006",
+              "coseriada": false
+            }
+          ]
+        }
+      ],
+      "teoria": 4.5,
+      "ubicacion": [
+        "ti",
+        "0"
+      ]
+    },
+    "1132050": {
+      "clave": "1132050",
+      "creditos": 6,
+      "nombre": "Calefacción, Ventilación y Aire Acondicionado",
+      "obligatoria": false,
+      "practica": 0,
+      "seriaciones": [
+        {
+          "creditos": [
+            {
+              "numero": 300,
+              "ubicacion": []
+            }
+          ],
+          "ueas": [
+            {
+              "clave": "1132026",
+              "coseriada": false
+            }
+          ]
+        }
+      ],
+      "teoria": 3,
+      "ubicacion": [
+        "ti",
+        "1"
+      ]
+    },
+    "1132052": {
+      "clave": "1132052",
+      "creditos": 6,
+      "nombre": "Procesos de Conversión de Energía",
+      "obligatoria": false,
+      "practica": 0,
+      "seriaciones": [
+        {
+          "creditos": [
+            {
+              "numero": 300,
+              "ubicacion": []
+            }
+          ],
+          "ueas": [
+            {
+              "clave": "1137006",
+              "coseriada": false
+            }
+          ]
+        }
+      ],
+      "teoria": 3,
+      "ubicacion": [
+        "ti",
+        "0"
+      ]
+    },
+    "1132064": {
+      "clave": "1132064",
+      "creditos": 3,
+      "nombre": "Laboratorio de Termofluidos I",
+      "obligatoria": true,
+      "practica": 3,
+      "seriaciones": [
+        {
+          "ueas": [
+            {
+              "clave": "1133048",
+              "coseriada": false
+            }
+          ]
+        }
+      ],
+      "teoria": 0,
+      "trimestre": 8,
+      "ubicacion": [
+        "tbp"
+      ]
+    },
+    "1132065": {
+      "clave": "1132065",
+      "creditos": 3,
+      "nombre": "Laboratorio de Termofluidos II",
+      "obligatoria": false,
+      "practica": 3,
+      "seriaciones": [
+        {
+          "ueas": [
+            {
+              "clave": "1132064",
+              "coseriada": false
+            }
+          ]
+        }
+      ],
+      "teoria": 0,
+      "ubicacion": [
+        "ti",
+        "0"
+      ]
+    },
+    "1132067": {
+      "clave": "1132067",
+      "creditos": 6,
+      "nombre": "Recursos Energéticos",
+      "obligatoria": false,
+      "practica": 0,
+      "seriaciones": [
+        {
+          "creditos": [
+            {
+              "numero": 300,
+              "ubicacion": []
+            }
+          ],
+          "ueas": [
+            {
+              "clave": "1137006",
+              "coseriada": false
+            }
+          ]
+        }
+      ],
+      "teoria": 3,
+      "ubicacion": [
+        "ti",
+        "1"
+      ]
+    },
+    "1132068": {
+      "clave": "1132068",
+      "creditos": 9,
+      "nombre": "Análisis de Problemas en Termofluidos",
+      "obligatoria": false,
+      "practica": 0,
+      "seriaciones": [
+        {
+          "ueas": [
+            {
+              "clave": "1137005",
+              "coseriada": false
+            },
+            {
+              "clave": "1132026",
+              "coseriada": false
+            }
+          ]
+        }
+      ],
+      "teoria": 4.5,
+      "ubicacion": [
+        "ti",
+        "0"
+      ]
+    },
+    "1132091": {
+      "clave": "1132091",
+      "creditos": 9,
+      "nombre": "Diseño de Sistemas Energéticos",
+      "obligatoria": false,
+      "practica": 0,
+      "seriaciones": [
+        {
+          "ueas": [
+            {
+              "clave": "1137005",
+              "coseriada": false
+            },
+            {
+              "clave": "1132026",
+              "coseriada": false
+            }
+          ]
+        }
+      ],
+      "teoria": 4.5,
+      "ubicacion": [
+        "ti",
+        "0"
+      ]
+    },
+    "1132092": {
+      "clave": "1132092",
+      "creditos": 9,
+      "nombre": "Energía Solar Aplicada",
+      "obligatoria": false,
+      "practica": 0,
+      "seriaciones": [
+        {
+          "creditos": [
+            {
+              "numero": 300,
+              "ubicacion": []
+            }
+          ]
+        }
+      ],
+      "teoria": 4.5,
+      "ubicacion": [
+        "ti",
+        "0"
+      ]
+    },
+    "1132093": {
+      "clave": "1132093",
+      "creditos": 3,
+      "nombre": "Laboratorio de Energía Solar",
+      "obligatoria": false,
+      "practica": 3,
+      "seriaciones": [
+        {
+          "ueas": [
+            {
+              "clave": "1132092",
+              "coseriada": true
+            }
+          ]
+        }
+      ],
+      "teoria": 0,
+      "ubicacion": [
+        "ti",
+        "0"
+      ]
+    },
+    "1132094": {
+      "clave": "1132094",
+      "creditos": 9,
+      "nombre": "Energía Eólica Aplicada",
+      "obligatoria": false,
+      "practica": 0,
+      "seriaciones": [
+        {
+          "creditos": [
+            {
+              "numero": 300,
+              "ubicacion": []
+            }
+          ]
+        }
+      ],
+      "teoria": 4.5,
+      "ubicacion": [
+        "ti",
+        "0"
+      ]
+    },
+    "1132099": {
+      "clave": "1132099",
+      "creditos": 6,
+      "nombre": "Taller de Fuentes Alternas de Energía",
+      "obligatoria": false,
+      "practica": 6,
+      "seriaciones": [
+        {
+          "otras": [
+            "autorizacion"
+          ],
+          "ueas": [
+            {
+              "clave": "1132092",
+              "coseriada": true
+            }
+          ]
+        },
+        {
+          "otras": [
+            "autorizacion"
+          ],
+          "ueas": [
+            {
+              "clave": "1132094",
+              "coseriada": true
+            }
+          ]
+        }
+      ],
+      "teoria": 0,
+      "ubicacion": [
+        "ti",
+        "1"
+      ]
+    },
+    "1133003": {
+      "clave": "1133003",
+      "creditos": 3,
+      "nombre": "Laboratorio de Dinámica y Vibraciones",
+      "obligatoria": false,
+      "practica": 3,
+      "seriaciones": [
+        {
+          "ueas": [
+            {
+              "clave": "1111013",
+              "coseriada": false
+            }
+          ]
+        }
+      ],
+      "teoria": 0,
+      "ubicacion": [
+        "ti",
+        "1"
+      ]
+    },
+    "1133009": {
+      "clave": "1133009",
+      "creditos": 3,
+      "nombre": "Laboratorio de Mecanismos",
+      "obligatoria": false,
+      "practica": 3,
+      "seriaciones": [
+        {
+          "ueas": [
+            {
+              "clave": "1133060",
+              "coseriada": true
+            }
+          ]
+        }
+      ],
+      "teoria": 0,
+      "ubicacion": [
+        "ti",
+        "1"
+      ]
+    },
+    "1133014": {
+      "clave": "1133014",
+      "creditos": 9,
+      "nombre": "Procesos de Manufactura I",
+      "obligatoria": false,
+      "practica": 0,
+      "seriaciones": [
+        {
+          "ueas": [
+            {
+              "clave": "1145054",
+              "coseriada": false
+            }
+          ]
+        }
+      ],
+      "teoria": 4.5,
+      "ubicacion": [
+        "ti",
+        "0"
+      ]
+    },
+    "1133015": {
+      "clave": "1133015",
+      "creditos": 3,
+      "nombre": "Taller de Procesos de Manufactura I",
+      "obligatoria": false,
+      "practica": 3,
+      "seriaciones": [
+        {
+          "ueas": [
+            {
+              "clave": "1133014",
+              "coseriada": true
+            }
+          ]
+        }
+      ],
+      "teoria": 0,
+      "ubicacion": [
+        "ti",
+        "0"
+      ]
+    },
+    "1133016": {
+      "clave": "1133016",
+      "creditos": 9,
+      "nombre": "Diseño de Elementos de Máquinas",
+      "obligatoria": false,
+      "practica": 0,
+      "seriaciones": [
+        {
+          "ueas": [
+            {
+              "clave": "1111045",
+              "coseriada": false
+            }
+          ]
+        }
+      ],
+      "teoria": 4.5,
+      "ubicacion": [
+        "ti",
+        "1"
+      ]
+    },
+    "1133024": {
+      "clave": "1133024",
+      "creditos": 9,
+      "nombre": "Dinámica de Máquinas",
+      "obligatoria": false,
+      "practica": 0,
+      "seriaciones": [
+        {
+          "ueas": [
+            {
+              "clave": "1133060",
+              "coseriada": false
+            },
+            {
+              "clave": "1133016",
+              "coseriada": false
+            }
+          ]
+        }
+      ],
+      "teoria": 4.5,
+      "ubicacion": [
+        "ti",
+        "1"
+      ]
+    },
+    "1133032": {
+      "clave": "1133032",
+      "creditos": 9,
+      "nombre": "Diseño de Mecanismos",
+      "obligatoria": false,
+      "practica": 0,
+      "seriaciones": [
+        {
+          "ueas": [
+            {
+              "clave": "1133060",
+              "coseriada": false
+            }
+          ]
+        }
+      ],
+      "teoria": 4.5,
+      "ubicacion": [
+        "ti",
+        "1"
+      ]
+    },
+    "1133048": {
+      "clave": "1133048",
+      "creditos": 6,
+      "nombre": "Mediciones en Ingeniería",
+      "obligatoria": true,
+      "practica": 2,
+      "seriaciones": [
+        {
+          "ueas": [
+            {
+              "clave": "1153001",
+              "coseriada": false
+            }
+          ]
+        }
+      ],
+      "teoria": 2,
+      "trimestre": 5,
+      "ubicacion": [
+        "tbp"
+      ]
+    },
+    "1133049": {
+      "clave": "1133049",
+      "creditos": 6,
+      "nombre": "Metrología para Manufactura",
+      "obligatoria": false,
+      "practica": 0,
+      "seriaciones": [
+        {
+          "ueas": [
+            {
+              "clave": "1153001",
+              "coseriada": false
+            }
+          ]
+        }
+      ],
+      "teoria": 3,
+      "ubicacion": [
+        "ti",
+        "1"
+      ]
+    },
+    "1133055": {
+      "clave": "1133055",
+      "creditos": 3,
+      "nombre": "Laboratorio de Metrología para Manufactura",
+      "obligatoria": false,
+      "practica": 3,
+      "seriaciones": [
+        {
+          "ueas": [
+            {
+              "clave": "1133049",
+              "coseriada": true
+            }
+          ]
+        }
+      ],
+      "teoria": 0,
+      "ubicacion": [
+        "ti",
+        "1"
+      ]
+    },
+    "1133060": {
+      "clave": "1133060",
+      "creditos": 9,
+      "nombre": "Mecanismos",
+      "obligatoria": false,
+      "practica": 0,
+      "seriaciones": [
+        {
+          "ueas": [
+            {
+              "clave": "1133048",
+              "coseriada": false
+            }
+          ]
+        }
+      ],
+      "teoria": 4.5,
+      "ubicacion": [
+        "ti",
+        "1"
+      ]
+    },
+    "1133061": {
+      "clave": "1133061",
+      "creditos": 9,
+      "nombre": "Dibujo Mecánico Asistido por Computadora",
+      "obligatoria": false,
+      "practica": 3,
+      "seriaciones": [
+        {
+          "creditos": [
+            {
+              "numero": 150,
+              "ubicacion": []
+            }
+          ],
+          "ueas": [
+            {
+              "clave": "1112013",
+              "coseriada": false
+            }
+          ]
+        }
+      ],
+      "teoria": 3,
+      "ubicacion": [
+        "ti",
+        "0"
+      ]
+    },
+    "1134002": {
+      "clave": "1134002",
+      "creditos": 9,
+      "nombre": "Hidráulica de Tuberías",
+      "obligatoria": false,
+      "practica": 0,
+      "seriaciones": [
+        {
+          "ueas": [
+            {
+              "clave": "1137005",
+              "coseriada": false
+            }
+          ]
+        }
+      ],
+      "teoria": 4.5,
+      "ubicacion": [
+        "ti",
+        "0"
+      ]
+    },
+    "1134003": {
+      "clave": "1134003",
+      "creditos": 9,
+      "nombre": "Hidráulica de Canales",
+      "obligatoria": false,
+      "practica": 0,
+      "seriaciones": [
+        {
+          "ueas": [
+            {
+              "clave": "1134002",
+              "coseriada": false
+            }
+          ]
+        }
+      ],
+      "teoria": 4.5,
+      "ubicacion": [
+        "ti",
+        "0"
+      ]
+    },
+    "1134004": {
+      "clave": "1134004",
+      "creditos": 3,
+      "nombre": "Laboratorio de Hidráulica de Tuberías",
+      "obligatoria": false,
+      "practica": 3,
+      "seriaciones": [
+        {
+          "ueas": [
+            {
+              "clave": "1134002",
+              "coseriada": true
+            }
+          ]
+        }
+      ],
+      "teoria": 0,
+      "ubicacion": [
+        "ti",
+        "0"
+      ]
+    },
+    "1135051": {
+      "clave": "1135051",
+      "creditos": 3,
+      "nombre": "Laboratorio de Combustión",
+      "obligatoria": false,
+      "practica": 3,
+      "seriaciones": [
+        {
+          "ueas": [
+            {
+              "clave": "1132049",
+              "coseriada": true
+            }
+          ]
+        }
+      ],
+      "teoria": 0,
+      "ubicacion": [
+        "ti",
+        "0"
+      ]
+    },
+    "1137005": {
+      "clave": "1137005",
+      "creditos": 9,
+      "nombre": "Transferencia de Momento",
+      "obligatoria": true,
+      "practica": 0,
+      "seriaciones": [
+        {
+          "ueas": [
+            {
+              "clave": "1111081",
+              "coseriada": false
+            },
+            {
+              "clave": "1112030",
+              "coseriada": false
+            }
+          ]
+        }
+      ],
+      "teoria": 4.5,
+      "trimestre": 6,
+      "ubicacion": [
+        "tbp"
+      ]
+    },
+    "1137006": {
+      "clave": "1137006",
+      "creditos": 9,
+      "nombre": "Termodinámica Aplicada",
+      "obligatoria": true,
+      "practica": 0,
+      "seriaciones": [
+        {
+          "ueas": [
+            {
+              "clave": "1113046",
+              "coseriada": false
+            }
+          ]
+        }
+      ],
+      "teoria": 4.5,
+      "trimestre": 5,
+      "ubicacion": [
+        "tbp"
+      ]
+    },
+    "1137007": {
+      "clave": "1137007",
+      "creditos": 9,
+      "nombre": "Propiedades Termodinámicas",
+      "obligatoria": true,
+      "practica": 0,
+      "seriaciones": [
+        {
+          "ueas": [
+            {
+              "clave": "1112029",
+              "coseriada": false
+            },
+            {
+              "clave": "1137006",
+              "coseriada": false
+            }
+          ]
+        }
+      ],
+      "teoria": 4.5,
+      "trimestre": 6,
+      "ubicacion": [
+        "tbp"
+      ]
+    },
+    "1137015": {
+      "clave": "1137015",
+      "creditos": 9,
+      "nombre": "Instalaciones Industriales",
+      "obligatoria": false,
+      "practica": 0,
+      "seriaciones": [
+        {
+          "creditos": [
+            {
+              "numero": 300,
+              "ubicacion": []
+            }
+          ],
+          "ueas": [
+            {
+              "clave": "1137005",
+              "coseriada": false
+            }
+          ]
+        }
+      ],
+      "teoria": 4.5,
+      "ubicacion": [
+        "ti",
+        "0"
+      ]
+    },
+    "1141006": {
+      "clave": "1141006",
+      "creditos": 3,
+      "nombre": "Laboratorio de Ciencia de los Materiales",
+      "obligatoria": false,
+      "practica": 3,
+      "seriaciones": [
+        {
+          "ueas": [
+            {
+              "clave": "1146038",
+              "coseriada": true
+            }
+          ]
+        }
+      ],
+      "teoria": 0,
+      "ubicacion": [
+        "ti",
+        "0"
+      ]
+    },
+    "1142025": {
+      "clave": "1142025",
+      "creditos": 3,
+      "nombre": "Laboratorio de Mecánica de Sólidos",
+      "obligatoria": false,
+      "practica": 3,
+      "seriaciones": [
+        {
+          "ueas": [
+            {
+              "clave": "1111045",
+              "coseriada": true
+            }
+          ]
+        }
+      ],
+      "teoria": 0,
+      "ubicacion": [
+        "ti",
+        "0"
+      ]
+    },
+    "1145001": {
+      "clave": "1145001",
+      "creditos": 6,
+      "nombre": "Metalografía",
+      "obligatoria": false,
+      "practica": 6,
+      "seriaciones": [
+        {
+          "ueas": [
+            {
+              "clave": "1145055",
+              "coseriada": false
+            }
+          ]
+        }
+      ],
+      "teoria": 0,
+      "ubicacion": [
+        "ti",
+        "0"
+      ]
+    },
+    "1145052": {
+      "clave": "1145052",
+      "creditos": 6,
+      "nombre": "Cristales y Dislocaciones",
+      "obligatoria": false,
+      "practica": 0,
+      "seriaciones": [
+        {
+          "ueas": [
+            {
+              "clave": "1145054",
+              "coseriada": false
+            }
+          ]
+        }
+      ],
+      "teoria": 3,
+      "ubicacion": [
+        "ti",
+        "0"
+      ]
+    },
+    "1145054": {
+      "clave": "1145054",
+      "creditos": 9,
+      "nombre": "Ingeniería de los Materiales",
+      "obligatoria": false,
+      "practica": 0,
+      "seriaciones": [
+        {
+          "ueas": [
+            {
+              "clave": "1113086",
+              "coseriada": false
+            }
+          ]
+        }
+      ],
+      "teoria": 4.5,
+      "ubicacion": [
+        "ti",
+        "0"
+      ]
+    },
+    "1145055": {
+      "clave": "1145055",
+      "creditos": 3,
+      "nombre": "Laboratorio de Ingeniería de los Materiales",
+      "obligatoria": false,
+      "practica": 3,
+      "seriaciones": [
+        {
+          "creditos": [
+            {
+              "numero": 90,
+              "ubicacion": []
+            }
+          ],
+          "ueas": [
+            {
+              "clave": "1113087",
+              "coseriada": false
+            },
+            {
+              "clave": "1145054",
+              "coseriada": false
+            }
+          ]
+        }
+      ],
+      "teoria": 0,
+      "ubicacion": [
+        "ti",
+        "0"
+      ]
+    },
+    "1145056": {
+      "clave": "1145056",
+      "creditos": 9,
+      "nombre": "Comportamiento Mecánico de los Materiales",
+      "obligatoria": false,
+      "practica": 0,
+      "seriaciones": [
+        {
+          "ueas": [
+            {
+              "clave": "1112030",
+              "coseriada": false
+            },
+            {
+              "clave": "1145052",
+              "coseriada": false
+            }
+          ]
+        }
+      ],
+      "teoria": 4.5,
+      "ubicacion": [
+        "ti",
+        "0"
+      ]
+    },
+    "1145057": {
+      "clave": "1145057",
+      "creditos": 3,
+      "nombre": "Laboratorio de Comportamiento Mecánico de los Materiales",
+      "obligatoria": false,
+      "practica": 3,
+      "seriaciones": [
+        {
+          "ueas": [
+            {
+              "clave": "1145056",
+              "coseriada": true
+            }
+          ]
+        }
+      ],
+      "teoria": 0,
+      "ubicacion": [
+        "ti",
+        "0"
+      ]
+    },
+    "1145058": {
+      "clave": "1145058",
+      "creditos": 9,
+      "nombre": "Transformaciones de Fase en los Materiales Metálicos",
+      "obligatoria": false,
+      "practica": 3,
+      "seriaciones": [
+        {
+          "ueas": [
+            {
+              "clave": "1137006",
+              "coseriada": false
+            }
+          ]
+        }
+      ],
+      "teoria": 3,
+      "ubicacion": [
+        "ti",
+        "0"
+      ]
+    },
+    "1145060": {
+      "clave": "1145060",
+      "creditos": 9,
+      "nombre": "Plasticidad de los Materiales Metálicos",
+      "obligatoria": false,
+      "practica": 0,
+      "seriaciones": [
+        {
+          "ueas": [
+            {
+              "clave": "1145056",
+              "coseriada": false
+            },
+            {
+              "clave": "1145057",
+              "coseriada": false
+            }
+          ]
+        }
+      ],
+      "teoria": 4.5,
+      "ubicacion": [
+        "ti",
+        "0"
+      ]
+    },
+    "1145061": {
+      "clave": "1145061",
+      "creditos": 3,
+      "nombre": "Laboratorio de Plasticidad de los Materiales Metálicos",
+      "obligatoria": false,
+      "practica": 3,
+      "seriaciones": [
+        {
+          "ueas": [
+            {
+              "clave": "1145060",
+              "coseriada": true
+            }
+          ]
+        }
+      ],
+      "teoria": 0,
+      "ubicacion": [
+        "ti",
+        "0"
+      ]
+    },
+    "1145066": {
+      "clave": "1145066",
+      "creditos": 9,
+      "nombre": "Metalurgia Mecánica",
+      "obligatoria": false,
+      "practica": 0,
+      "seriaciones": [
+        {
+          "ueas": [
+            {
+              "clave": "1145060",
+              "coseriada": false
+            },
+            {
+              "clave": "1145061",
+              "coseriada": false
+            }
+          ]
+        }
+      ],
+      "teoria": 4.5,
+      "ubicacion": [
+        "ti",
+        "0"
+      ]
+    },
+    "1145071": {
+      "clave": "1145071",
+      "creditos": 6,
+      "nombre": "Oxidación, Corrosión y Protección de los Materiales Metálicos",
+      "obligatoria": false,
+      "practica": 0,
+      "seriaciones": [
+        {
+          "ueas": [
+            {
+              "clave": "1145054",
+              "coseriada": false
+            }
+          ]
+        }
+      ],
+      "teoria": 3,
+      "ubicacion": [
+        "ti",
+        "0"
+      ]
+    },
+    "1145072": {
+      "clave": "1145072",
+      "creditos": 3,
+      "nombre": "Laboratorio de Oxidación, Corrosión y Protección de los Materiales Metálicos",
+      "obligatoria": false,
+      "practica": 3,
+      "seriaciones": [
+        {
+          "ueas": [
+            {
+              "clave": "1145071",
+              "coseriada": true
+            }
+          ]
+        }
+      ],
+      "teoria": 0,
+      "ubicacion": [
+        "ti",
+        "0"
+      ]
+    },
+    "1145091": {
+      "clave": "1145091",
+      "creditos": 9,
+      "nombre": "Dislocaciones en los Materiales Metálicos",
+      "obligatoria": false,
+      "practica": 3,
+      "seriaciones": [
+        {
+          "ueas": [
+            {
+              "clave": "1145052",
+              "coseriada": false
+            }
+          ]
+        }
+      ],
+      "teoria": 3,
+      "ubicacion": [
+        "ti",
+        "0"
+      ]
+    },
+    "1146038": {
+      "clave": "1146038",
+      "creditos": 9,
+      "nombre": "Ciencia de los Materiales",
+      "obligatoria": false,
+      "practica": 0,
+      "seriaciones": [
+        {
+          "ueas": [
+            {
+              "clave": "1145054",
+              "coseriada": false
+            }
+          ]
+        }
+      ],
+      "teoria": 4.5,
+      "ubicacion": [
+        "ti",
+        "0"
+      ]
+    },
+    "1146041": {
+      "clave": "1146041",
+      "creditos": 3,
+      "nombre": "Laboratorio de Metalurgia Mecánica",
+      "obligatoria": false,
+      "practica": 3,
+      "seriaciones": [
+        {
+          "ueas": [
+            {
+              "clave": "1145066",
+              "coseriada": true
+            }
+          ]
+        }
+      ],
+      "teoria": 0,
+      "ubicacion": [
+        "ti",
+        "0"
+      ]
+    },
+    "1151009": {
+      "clave": "1151009",
+      "creditos": 9,
+      "nombre": "Elemento Finito",
+      "obligatoria": false,
+      "practica": 0,
+      "seriaciones": [
+        {
+          "ueas": [
+            {
+              "clave": "1151039",
+              "coseriada": false
+            },
+            {
+              "clave": "1112030",
+              "coseriada": false
+            }
+          ]
+        }
+      ],
+      "teoria": 4.5,
+      "ubicacion": [
+        "ti",
+        "1"
+      ]
+    },
+    "1151038": {
+      "clave": "1151038",
+      "creditos": 7,
+      "nombre": "Programación Estructurada",
+      "obligatoria": true,
+      "practica": 2,
+      "seriaciones": [
+        {
+          "ueas": [
+            {
+              "clave": "1112013",
+              "coseriada": false
+            }
+          ]
+        }
+      ],
+      "teoria": 2.5,
+      "trimestre": 2,
+      "ubicacion": [
+        "tg"
+      ]
+    },
+    "1151039": {
+      "clave": "1151039",
+      "creditos": 7,
+      "nombre": "Métodos Numéricos en Ingeniería",
+      "obligatoria": true,
+      "practica": 2,
+      "seriaciones": [
+        {
+          "ueas": [
+            {
+              "clave": "1151038",
+              "coseriada": false
+            },
+            {
+              "clave": "1112030",
+              "coseriada": true
+            }
+          ]
+        }
+      ],
+      "teoria": 2.5,
+      "trimestre": 4,
+      "ubicacion": [
+        "tg"
+      ]
+    },
+    "1151042": {
+      "clave": "1151042",
+      "creditos": 8,
+      "nombre": "Algoritmos y Estructura de Datos",
+      "obligatoria": false,
+      "practica": 1,
+      "seriaciones": [
+        {
+          "ueas": [
+            {
+              "clave": "1151038",
+              "coseriada": false
+            }
+          ]
+        }
+      ],
+      "teoria": 3.5,
+      "ubicacion": [
+        "ti",
+        "1"
+      ]
+    },
+    "1152001": {
+      "clave": "1152001",
+      "creditos": 9,
+      "nombre": "Investigación de Operaciones I",
+      "obligatoria": false,
+      "practica": 0,
+      "seriaciones": [
+        {
+          "ueas": [
+            {
+              "clave": "1151039",
+              "coseriada": false
+            }
+          ]
+        }
+      ],
+      "teoria": 4.5,
+      "ubicacion": [
+        "ti",
+        "1"
+      ]
+    },
+    "1153001": {
+      "clave": "1153001",
+      "creditos": 9,
+      "nombre": "Probabilidad y Estadística",
+      "obligatoria": true,
+      "practica": 0,
+      "seriaciones": [
+        {
+          "ueas": [
+            {
+              "clave": "1112029",
+              "coseriada": false
+            }
+          ]
+        }
+      ],
+      "teoria": 4.5,
+      "trimestre": 4,
+      "ubicacion": [
+        "tg"
+      ]
+    },
+    "1154016": {
+      "clave": "1154016",
+      "creditos": 9,
+      "nombre": "Estadística Aplicada I",
+      "obligatoria": false,
+      "practica": 0,
+      "seriaciones": [
+        {
+          "ueas": [
+            {
+              "clave": "1153001",
+              "coseriada": false
+            },
+            {
+              "clave": "1151039",
+              "coseriada": false
+            }
+          ]
+        }
+      ],
+      "teoria": 4.5,
+      "ubicacion": [
+        "ti",
+        "1"
+      ]
+    },
+    "1154029": {
+      "clave": "1154029",
+      "creditos": 9,
+      "nombre": "Análisis y Diseño de Experimentos en Ingeniería",
+      "obligatoria": false,
+      "practica": 0,
+      "seriaciones": [
+        {
+          "ueas": [
+            {
+              "clave": "1153001",
+              "coseriada": false
+            }
+          ]
+        }
+      ],
+      "teoria": 4.5,
+      "ubicacion": [
+        "ti",
+        "0"
+      ]
+    },
+    "1154042": {
+      "clave": "1154042",
+      "creditos": 8,
+      "nombre": "Control de Calidad y Confiabilidad",
+      "obligatoria": false,
+      "practica": 1,
+      "seriaciones": [
+        {
+          "creditos": [
+            {
+              "numero": 350,
+              "ubicacion": []
+            }
+          ],
+          "ueas": [
+            {
+              "clave": "1153001",
+              "coseriada": false
+            }
+          ]
+        }
+      ],
+      "teoria": 3.5,
+      "ubicacion": [
+        "ti",
+        "1"
+      ]
+    },
+    "1154045": {
+      "clave": "1154045",
+      "creditos": 8,
+      "nombre": "Seguridad e Higiene Industrial",
+      "obligatoria": false,
+      "practica": 1,
+      "seriaciones": [
+        {
+          "creditos": [
+            {
+              "numero": 350,
+              "ubicacion": []
+            }
+          ]
+        }
+      ],
+      "teoria": 3.5,
+      "ubicacion": [
+        "ti",
+        "1"
+      ]
+    },
+    "1200100": {
+      "clave": "1200100",
+      "creditos": 6,
+      "nombre": "Lectura y Escritura I",
+      "obligatoria": false,
+      "por_consejo": true,
+      "practica": 3,
+      "seriaciones": [
+        {
+          "creditos": [
+            {
+              "numero": 150,
+              "ubicacion": []
+            }
+          ]
+        }
+      ],
+      "teoria": 1.5,
+      "ubicacion": [
+        "tim"
+      ]
+    },
+    "1200101": {
+      "clave": "1200101",
+      "creditos": 6,
+      "nombre": "Lectura y Escritura II",
+      "obligatoria": false,
+      "por_consejo": true,
+      "practica": 3,
+      "seriaciones": [
+        {
+          "creditos": [
+            {
+              "numero": 150,
+              "ubicacion": []
+            }
+          ]
+        }
+      ],
+      "teoria": 1.5,
+      "ubicacion": [
+        "tim"
+      ]
+    },
+    "2000001": {
+      "clave": "2000001",
+      "creditos": 6,
+      "nombre": "Optativa Inter y Multidisciplinar 1",
+      "obligatoria": true,
+      "practica": 0,
+      "seriaciones": [
+        {
+          "creditos": [
+            {
+              "numero": 150,
+              "ubicacion": []
+            }
+          ]
+        }
+      ],
+      "teoria": 3,
+      "trimestre": 5,
+      "ubicacion": [
+        "ti"
+      ]
+    },
+    "2000002": {
+      "clave": "2000002",
+      "creditos": 6,
+      "nombre": "Optativa Inter y Multidisciplinar 2",
+      "obligatoria": true,
+      "practica": 0,
+      "seriaciones": [
+        {
+          "creditos": [
+            {
+              "numero": 4,
+              "ubicacion": []
+            }
+          ]
+        }
+      ],
+      "teoria": 3,
+      "trimestre": 2,
+      "ubicacion": [
+        "ti"
+      ]
+    },
+    "2000003": {
+      "clave": "2000003",
+      "creditos": 6,
+      "nombre": "Optativa Inter y Multidisciplinar 3",
+      "obligatoria": true,
+      "practica": 0,
+      "seriaciones": [
+        {
+          "creditos": [
+            {
+              "numero": 150,
+              "ubicacion": []
+            }
+          ]
+        }
+      ],
+      "teoria": 3,
+      "trimestre": 10,
+      "ubicacion": [
+        "ti"
+      ]
+    },
+    "3000001": {
+      "clave": "3000001",
+      "creditos": 6,
+      "nombre": "Optativa del Tronco de Integración 1",
+      "obligatoria": true,
+      "practica": 0,
+      "seriaciones": [
+        {
+          "creditos": [
+            {
+              "numero": 300,
+              "ubicacion": []
+            }
+          ]
+        }
+      ],
+      "teoria": 3,
+      "trimestre": 9,
+      "ubicacion": [
+        "ti"
+      ]
+    },
+    "3000002": {
+      "clave": "3000002",
+      "creditos": 9,
+      "nombre": "Optativa del Tronco de Integración 2",
+      "obligatoria": true,
+      "practica": 0,
+      "seriaciones": [
+        {
+          "ueas": [
+            {
+              "clave": "1111055",
+              "coseriada": false
+            }
+          ]
+        }
+      ],
+      "teoria": 3,
+      "trimestre": 9,
+      "ubicacion": [
+        "ti"
+      ]
+    },
+    "3000003": {
+      "clave": "3000003",
+      "creditos": 9,
+      "nombre": "Optativa del Tronco de Integración 3",
+      "obligatoria": true,
+      "practica": 0,
+      "seriaciones": [
+        {
+          "creditos": [
+            {
+              "numero": 350,
+              "ubicacion": []
+            }
+          ]
+        }
+      ],
+      "teoria": 4.5,
+      "trimestre": 11,
+      "ubicacion": [
+        "ti"
+      ]
+    },
+    "3000004": {
+      "clave": "3000004",
+      "creditos": 9,
+      "nombre": "Optativa del Tronco de Integración 4",
+      "obligatoria": true,
+      "practica": 0,
+      "seriaciones": [
+        {
+          "ueas": [
+            {
+              "clave": "1111088",
+              "coseriada": false
+            }
+          ]
+        }
+      ],
+      "teoria": 4.5,
+      "trimestre": 11,
+      "ubicacion": [
+        "ti"
+      ]
+    },
+    "3000005": {
+      "clave": "3000005",
+      "creditos": 3,
+      "nombre": "Optativa del Tronco de Integración 5",
+      "obligatoria": true,
+      "practica": 0,
+      "seriaciones": [
+        {
+          "ueas": [
+            {
+              "clave": "3000002",
+              "coseriada": false
+            },
+            {
+              "clave": "1111044",
+              "coseriada": false
+            }
+          ]
+        }
+      ],
+      "teoria": 4.5,
+      "trimestre": 12,
+      "ubicacion": [
+        "ti"
+      ]
+    },
+    "3000006": {
+      "clave": "3000006",
+      "creditos": 3,
+      "nombre": "Optativa del Tronco de Integración 6",
+      "obligatoria": true,
+      "practica": 0,
+      "seriaciones": [
+        {
+          "creditos": [
+            {
+              "numero": 350,
+              "ubicacion": []
+            }
+          ]
+        }
+      ],
+      "teoria": 3,
+      "trimestre": 12,
+      "ubicacion": [
+        "ti"
+      ]
+    },
+    "3000007": {
+      "clave": "3000007",
+      "creditos": 9,
+      "nombre": "Optativa del Tronco de Integración 7",
+      "obligatoria": true,
+      "practica": 0,
+      "seriaciones": [
+        {
+          "creditos": [
+            {
+              "numero": 350,
+              "ubicacion": []
+            }
+          ]
+        }
+      ],
+      "teoria": 3,
+      "trimestre": 12,
+      "ubicacion": [
+        "ti"
+      ]
+    },
+    "3000008": {
+      "clave": "3000008",
+      "creditos": 3,
+      "nombre": "Optativa del Tronco de Integración 8",
+      "obligatoria": true,
+      "practica": 0,
+      "seriaciones": [
+        {
+          "creditos": [
+            {
+              "numero": 350,
+              "ubicacion": []
+            }
+          ]
+        }
+      ],
+      "teoria": 3,
+      "trimestre": 10,
+      "ubicacion": [
+        "ti"
+      ]
+    },
+    "3000009": {
+      "clave": "3000009",
+      "creditos": 9,
+      "nombre": "Optativa del Tronco de Integración 9",
+      "obligatoria": true,
+      "practica": 0,
+      "seriaciones": [
+        {
+          "creditos": [
+            {
+              "numero": 350,
+              "ubicacion": []
+            }
+          ]
+        }
+      ],
+      "teoria": 3,
+      "trimestre": 11,
+      "ubicacion": [
+        "ti"
+      ]
+    },
+    "3000010": {
+      "clave": "3000010",
+      "creditos": 3,
+      "nombre": "Optativa del Tronco de Integración 10",
+      "obligatoria": true,
+      "practica": 0,
+      "seriaciones": [
+        {
+          "creditos": [
+            {
+              "numero": 350,
+              "ubicacion": []
+            }
+          ]
+        }
+      ],
+      "teoria": 3,
+      "trimestre": 10,
+      "ubicacion": [
+        "ti"
+      ]
+    }
+  },
+  "unidad": "azc",
+  "version": "16"
+}

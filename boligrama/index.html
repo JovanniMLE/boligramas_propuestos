@@ -1,0 +1,1398 @@
+<!doctype html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <title>Visualización de kardex</title>
+      <style>
+         * {
+            font-family: Arial;
+            font-size: 13px;
+         }
+
+         body {
+            width: 98%;
+            margin: 0px;
+            padding: 10px;
+            display: inline-block;
+         }
+         
+         body.solicitud_unica #formulario, body.solicitud_unica #instrucciones {
+            display: none !important;
+         }
+
+         #encabezado {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+         }
+
+         #formulario {
+            display: inline-block;
+            width: 210px;
+         }
+
+         #formulario .dato_leyenda, #formulario .dato_forma, #formulario .dato_boton, .dato_imagen {
+            display: inline-block;
+         }
+
+         #formulario .dato_leyenda, .dato_boton {
+            width: 70px;
+         }
+
+         #formulario .dato_forma input {
+            width: 120px;
+         }
+
+         #formulario .dato_boton input {
+            width: 70px;
+         }
+
+         #formulario .dato_imagen {
+            width: 50px;
+         }
+
+         #formulario .dato_imagen img {
+            display: block;
+            margin: 0px auto;
+         }
+
+         #instrucciones {
+            width: 50%;
+            text-align: center;
+         }
+
+         #general {
+            display: inline-table;
+            font-weight: bold;
+            text-align: center;
+            max-width: 250px;
+         }
+         
+         #general .paterno, #general .materno, #general .nombre {
+            display: inline-block;
+            margin: 2px;
+         }
+
+         #general .matricula, #general .carrera {
+            font-size: 16px;
+         }
+
+         #mensaje {
+            width: 23%;
+         }
+
+         #mensaje div {
+            padding: 2px 0px;
+         }
+
+         #codigo {
+            display: flex;
+            align-items: center;
+         }
+
+         #codigo * {
+            font-size: 11px;
+         }
+
+         #codigo_troncos, #codigo_simbologia {
+            display: inline-block;
+         }
+
+         #codigo_troncos {
+            margin-right: 11px;
+         }
+
+         #codigo_troncos div, #codigo_simbologia div {
+            margin-bottom: 5px;
+         }
+
+         #codigo_troncos .codigo, #codigo_simbologia .codigo {
+            cursor: auto;
+         }
+
+         #codigo_troncos .codigo {
+            border: 0px;
+         }
+
+         #codigo_simbologia .codigo {
+            background-color: #EEEEEE;
+         }
+         
+         #logo img {
+            max-width: 250px;
+         }
+
+         #visualizacion {
+            display: inline-block;
+            position: relative;
+            margin-top: 15px;
+            z-index: 0;
+         }
+
+         #visualizacion #flechas {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            pointer-events: none;
+            z-index: 1;
+         }
+         
+         #visualizacion #flechas line {
+            marker-end: url(#triangle);
+         }
+
+         #visualizacion #filas_optativas > .fila:first-child {
+            margin-top: 5px;
+         }
+
+         #visualizacion .fila {
+            display: table;
+            table-layout: fixed;
+            border-collapse: separate;
+            border-spacing: 13px 5px;
+            margin: 5px;
+         }
+
+         #visualizacion .celda {
+            position: relative;
+            display: table-cell;
+            height: 100px;
+            padding: 5px;
+            box-sizing: border-box; 
+            vertical-align: top;
+         }
+
+         #visualizacion .caption {
+            vertical-align: middle;
+         }
+
+         #visualizacion .placeholder, .uea {
+            border: 2px solid transparent;
+            border-radius: 10px;
+            border-color: transparent;
+         }
+
+         #visualizacion .uea {
+            cursor: pointer;
+         }
+
+         #visualizacion .uea_disponible, .uea_disponible {
+            /*border-color: rgb(51, 51, 255) !important;
+            border-style: dashed;
+            box-shadow: inset 0px 0px 0px 100000px rgba(255, 255, 255, 0.6);
+            z-index: 1;*/
+         }
+         
+         #visualizacion .uea_bloqueada, .uea_bloqueada {
+            /*opacity: 0.4;*/
+         }
+
+         #visualizacion .uea_semivisible {
+            /*opacity: 0.1;*/
+         }
+         
+         #visualizacion .leyenda {
+            width: 102px;
+         }
+                  
+         #visualizacion .clave {
+            display: inline-block;
+         }
+
+         #visualizacion .creditos {
+            float: right;
+         }
+
+         #visualizacion .nombre {
+            margin-top: 7px;
+            width: 190px;
+         }
+
+         #visualizacion .calificacion {
+            position: absolute;
+            bottom: 5px;
+            right: 5px;
+         }
+
+         #visualizacion .calificacion img {
+            width: 10px;
+            margin-right: 2px;
+         }
+
+         #visualizacion .seriacion_leyenda {
+            display: none;
+            position: absolute;
+            bottom: 5px;
+            left: 5px;
+            padding: 2px;            
+            color: rgb(255, 51, 51);
+            text-shadow: 0px 1px rgb(255, 128, 128);
+         }
+         
+         #visualizacion .seriacion_leyenda:first-letter {
+            text-transform: uppercase;
+         }
+                  
+         #visualizacion .uea_elegida .seriacion_leyenda {
+            display: inline;
+         }
+
+         #visualizacion .seriacion, .coseriacion, .habilitacion, .cohabilitacion {
+            stroke-width: 2px;
+         }
+
+         #visualizacion .coseriacion, .cohabilitacion {
+            stroke-dasharray: 5px 5px;
+         }
+
+         #visualizacion .seriacion, .coseriacion {
+            stroke: rgb(255, 51, 51);
+         }
+
+         #visualizacion .habilitacion, .cohabilitacion {
+            stroke: rgb(51, 51, 255);
+         }
+         
+         #footer {
+            width: 100%;
+            text-align: center;
+         }
+           
+         #comentario {
+            display: inline-block;
+            width: 340px;
+            vertical-align: middle;
+            margin: 15px 20px 15px 0px;
+            text-align: justify;
+         }
+           
+         #tabla {
+            display: inline-block;
+            margin: 15px auto;
+            min-width: 43%;
+         }
+         
+         #tabla table {
+            display: inline-block;
+            border-collapse: collapse;
+            vertical-align: middle;
+         }
+                  
+         #tabla td, #tabla th {
+            padding: 4px 8px;
+         }
+
+         #tabla th.izquierdo {
+            text-align: left;
+         }
+         
+         #tabla th.nivel_1 span {
+            font-weight: bold;
+         }
+         
+         #tabla th.nivel_2 span {
+            font-weight: normal;
+            text-decoration: underline;
+            margin-left: 10px;
+         }
+
+         #tabla th.nivel_3 span {
+            font-weight: normal;
+            margin-left: 20px;
+         }
+
+         #tabla th.nivel_4 span {
+            font-weight: normal;
+            font-style: italic;
+            margin-left: 30px;
+         }
+         
+         #tabla td span {
+            display: inline-block;
+            min-width: 20px;
+         }
+         
+         #tabla td span.explicacion {
+            color: rgb(51, 102, 187);
+            text-decoration: underline dotted;
+            cursor: pointer;
+         }
+
+         #tabla span.explicacion:before {            
+            position: absolute;
+            content: attr(data-tooltip);
+            white-space: pre-line;
+            opacity: 0;
+            padding: 3px 5px;
+            border: 1px solid rgb(118, 118, 118);
+            border-radius: 2px;
+            pointer-events: none;
+         }
+
+         #tabla span.explicacion:hover:before {        
+            opacity: 1;
+            color: black;
+            background-color: rgb(245, 245, 245);
+            margin-left: 18px;
+            margin-top: -29px;
+         }
+         
+         #tabla .dato_izq {
+            text-align: right;
+         }
+
+         #tabla .dato_der {
+            text-align: left;
+         }
+         
+         #promedio {
+            display: inline-block;
+            width: 300px;
+            vertical-align: middle;
+            margin: 15px 0px 15px 20px;
+            text-align: justify;
+         }
+         
+         .tna, .tb {
+            background-color: rgb(255, 229, 204);
+            border-color: rgb(252, 207, 163);
+         }
+
+         .tg {
+            background-color: rgb(255, 250, 216);
+            border-color: rgb(252, 245, 185);
+         }
+
+         .tbp, .tp {
+            background-color: rgb(204, 255, 204);
+            border-color: rgb(151, 255, 151);
+         }
+
+         .ti, .ac {
+            background-color: rgb(229, 204, 229);
+            border-color: rgb(212, 170, 212);
+         }
+
+         .tim, .opt, .opt0, .opt1, .opt2 {
+            background-color: rgb(204, 204, 255);
+            border-color: rgb(170, 170, 253);
+         }
+         /* Menu */
+         .menu{
+            list-style: none;
+            padding: 0;
+            background: white;
+            width: 95%;
+            margin: auto;
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 13px;
+         }
+
+         .menu li{
+            flex: 1;
+            text-align: center;
+         }
+
+         .menu li a{
+            text-decoration: none;
+            color: black;
+            padding: 20px;
+            display: block;
+            border-radius: 10px;
+            border: 2px solid white;
+            box-sizing: border-box;
+         }
+
+         .menu li a:hover{
+            background: #c0ebfffa;
+            border-color: #93c7ff;
+         }
+
+         .menu li a.selected {
+            background: #c0ebfffa;
+            border-color: #93c7ff;
+         }
+
+      </style>
+      <script type="text/javascript" src="./base/ajax.js" async></script>
+      <script type="text/javascript" src="./base/dom.js" async></script>
+      <script type="text/javascript" src="./base/input.js" async></script>
+   </head>
+   <body onload="solicita_datos( )">
+      <ul class="menu">
+         <li><a onclick="solicita_datos('1_15_modificado.json')">Ambiental</a></li>
+         <li><a onclick="solicita_datos('2_14_modificado.json')">Civil</a></li>
+         <li><a onclick="solicita_datos('122_9_modificado.json')">Computación</a></li>
+         <li><a onclick="solicita_datos('3_17_modificado.json')">Eléctrica</a></li>
+         <li><a onclick="solicita_datos('9_15_modificado.json')">Electrónica</a></li>
+         <li><a onclick="solicita_datos('4_16_modificado.json')">Física</a></li>
+         <li><a onclick="solicita_datos('5_14_modificado.json')">Industrial</a></li>
+         <li><a onclick="solicita_datos('6_14_modificado.json')">Mecánica</a></li>
+         <li><a onclick="solicita_datos('7_14_modificado.json')">Metalúrgica</a></li>
+         <li><a onclick="solicita_datos('8_12_modificado.json')">Química</a></li>
+      </ul>
+      <div id="encabezado">
+         <div id="general"></div>
+         <div id="mensaje" style="display: none;">
+            <strong>Estimado alumno</strong>
+            <div id="egreso_proximo" style="display: none;">
+               Felicidades, estás próximo a finalizar tus estudios. En caso de tener alguna dificultad académica, acude <strong>oportunamente</strong> con tu coordinador(a) de estudios. Si al tratar de inscribir alguna de las UEA obligatorias no alcanzas cupo, tu coordinador(a) te podrá apoyar asignándote prioridad en las ampliaciones.
+            </div>
+            <div id="egreso_proximo_riesgo" style="display: none;">
+               Felicidades, estás próximo a finalizar tus estudios. Sin embargo, por el tiempo que ha transcurrido desde tu ingreso a la UAM, podrías <strong>estar en riesgo</strong> de perder la calidad de alumno sin lograr concluir tus estudios. En caso de que aún no conozcas tu situación académica a detalle, es <strong>importante</strong> que contactes a tu coordinador(a) de estudios para que te oriente.
+            </div>
+            <div id="tiempo_riesgo" style="display: none;">
+               Por el tiempo que ha transcurrido desde tu ingreso a la UAM, podrías <strong>estar en riesgo</strong> de perder la calidad de alumno sin lograr concluir tus estudios. En caso de que aún no conozcas tu situación académica a detalle, es <strong>importante</strong> que contactes a tu coordinador(a) de estudios para plantear acciones que te ayuden a mejorar tu avance en la licenciatura y posibiliten tu egreso.
+            </div>
+            <div id="ritmo_1anyos" style="display: none;">
+               Felicidades, llevas un buen ritmo de avance en tus estudios. De mantenerlo, podrías concluir tu carrera en un tiempo total cercano a un año. Mantén el compromiso mostrado hasta ahora. Seguramente el esfuerzo que has realizado te permitirá adquirir una sólida formación profesional.
+               En caso de tener dudas sobre aspectos académicos, es importante que acudas con tu coordinador(a) de estudios.
+            </div>
+            <div id="ritmo_2anyos" style="display: none;">
+               Felicidades, llevas un buen ritmo de avance en tus estudios. De mantenerlo, podrías concluir tu carrera en un tiempo total cercano a los 2 años. Mantén el compromiso mostrado hasta ahora. Seguramente el esfuerzo que has realizado te permitirá adquirir una sólida formación profesional.
+               En caso de tener dudas sobre aspectos académicos, es importante que acudas con tu coordinador(a) de estudios.
+            </div>
+            <div id="ritmo_3anyos" style="display: none;">
+               Felicidades, llevas un buen ritmo de avance en tus estudios. De mantenerlo, podrías concluir tu carrera en un tiempo total cercano a los 3 años. Mantén el compromiso mostrado hasta ahora. Seguramente el esfuerzo que has realizado te permitirá adquirir una sólida formación profesional.
+               En caso de tener dudas sobre aspectos académicos, es importante que acudas con tu coordinador(a) de estudios.
+            </div>
+            <div id="ritmo_4anyos" style="display: none;">
+               Felicidades, llevas un buen ritmo de avance en tus estudios. De mantenerlo, podrías concluir tu carrera en un tiempo total cercano a los 4 años. Mantén el compromiso mostrado hasta ahora. Seguramente el esfuerzo que has realizado te permitirá adquirir una sólida formación profesional.
+               En caso de tener dudas sobre aspectos académicos, es importante que acudas con tu coordinador(a) de estudios.
+            </div>
+            <div id="ritmo_5anyos" style="display: none;">
+               Al revisar tu historia académica, se aprecia que llevas un buen ritmo de avance en tus estudios. De mantenerlo, podrías concluir tu carrera en un tiempo total cercano a los 5 años, lo cual es ligeramente superior al establecido en el plan de estudios. Te invitamos a redoblar esfuerzos para mejorar tu ritmo de avance y adquirir una sólida formación profesional.
+               En caso de tener dudas sobre aspectos académicos, es importante que acudas con tu coordinador(a) de estudios.
+            </div>
+            <div id="ritmo_6anyos" style="display: none;">
+               Al revisar tu historia académica, se aprecia que con tu ritmo promedio de avance en tus estudios podrías concluir tu carrera en un tiempo total cercano a los 6 años. La edad al egresar de la licenciatura es un criterio que algunos empleadores consideran para la contratación. Es por ello que te invitamos a redoblar esfuerzos a fin de mejorar tu ritmo de avance y adquirir una sólida formación profesional.
+               En caso de tener dudas sobre aspectos académicos, es importante que acudas con tu coordinador(a) de estudios.
+            </div>
+            <div id="ritmo_7anyos" style="display: none;">
+               Al revisar tu historia académica, se aprecia que con tu ritmo promedio de avance en tus estudios podrías concluir tu carrera en un tiempo total cercano a los 7 años. La edad al egresar de la licenciatura es un criterio que algunos empleadores consideran para la contratación. Es por ello que te invitamos a redoblar esfuerzos a fin de mejorar tu ritmo de avance y adquirir una sólida formación profesional.
+               En caso de tener dudas sobre aspectos académicos, es importante que acudas con tu coordinador(a) de estudios.
+            </div>
+            <div id="ritmo_8anyos" style="display: none;">
+               Al revisar tu historia académica, se aprecia que con tu ritmo promedio de avance en tus estudios podrías concluir tu carrera en un tiempo total cercano a los 8 años. La edad al egresar de la licenciatura es un criterio que algunos empleadores consideran para la contratación. Es por ello que te invitamos a redoblar esfuerzos a fin de mejorar tu ritmo de avance y adquirir una sólida formación profesional.
+               En caso de tener dudas sobre aspectos académicos, es importante que acudas con tu coordinador(a) de estudios.
+            </div>
+            <div id="ritmo_9anyos" style="display: none;">
+               Al revisar tu historia académica, se aprecia que con tu ritmo promedio de avance en tus estudios podrías concluir tu carrera en un tiempo total cercano a los 9 años. La edad al egresar de la licenciatura es un criterio que algunos empleadores consideran para la contratación. Es por ello que te invitamos a redoblar esfuerzos a fin de mejorar tu ritmo de avance y adquirir una sólida formación profesional.
+               En caso de tener dudas sobre aspectos académicos, es importante que acudas con tu coordinador(a) de estudios.
+            </div>
+            <div id="ritmo_10anyos" style="display: none;">
+               Al revisar tu historia académica, se aprecia que con tu ritmo promedio de avance en tus estudios podrías concluir tu carrera en un tiempo total cercano a los 10 años. La edad al egresar de la licenciatura es un criterio que algunos empleadores consideran para la contratación. Es por ello que te invitamos a redoblar esfuerzos a fin de mejorar tu ritmo de avance y adquirir una sólida formación profesional.
+               En caso de tener dudas sobre aspectos académicos, es importante que acudas con tu coordinador(a) de estudios.
+            </div>
+            <div id="ritmo_10+anyos" style="display: none;">
+               Al revisar tu historia académica, se aprecia que con tu ritmo promedio de avance en tus estudios podrías requerir más de 10 años para concluir tu carrera. La edad al egresar de la licenciatura es un criterio que algunos empleadores consideran para la contratación. Es por ello que te invitamos a redoblar esfuerzos a fin de mejorar tu ritmo de avance y adquirir una sólida formación profesional.
+               En caso de tener dudas sobre aspectos académicos, es importante que acudas con tu coordinador(a) de estudios.
+            </div>
+            <div id="ritmo_riesgoso" style="display: none;">
+               Al revisar tu historia académica, se aprecia que con tu ritmo promedio de avance en tus estudios, el <strong>riesgo de no concluir tus estudios es alto</strong>. Si realmente deseas egresar, debes asumir un mayor compromiso y enfocar tus esfuerzos de forma que logres mejores resultados. En caso de que aún no conozcas tu situación académica a detalle, te hacemos una atenta invitación para que acudas con tu coordinador(a) de estudios para plantear acciones que te ayuden a mejorar tu avance en la licenciatura y posibiliten tu egreso.
+            </div>
+            <div id="quinta_oportunidad" style="display: none;">
+               Al revisar tu historia académica, se ha detectado que tienes al menos una UEA en la que has acumulado cuatro calificaciones no aprobatorias. Conforme a lo que establece el Reglamento de Estudios Superiores, de obtener una quinta calificación no aprobatoria, perderás la calidad de alumno. Te hacemos una atenta invitación para que acudas con tu coordinador(a) de estudios para que te oriente y realices lo necesario para resolver esta problemática, así como para avanzar de forma más consistente y estar en posibilidad de concluir tus estudios.
+            </div>
+         </div>
+         <div id="codigo" style="display: none;">
+            <div id="codigo_troncos"></div>
+            <div id="codigo_simbologia" style="display: none;">
+               <div class="uea uea_aprobada codigo">  UEA aprobada</div>
+               <div class="uea uea_disponible codigo">UEA con seriación cubierta</div>
+               <div class="uea uea_bloqueada codigo"> UEA con seriación no cubierta</div>
+               <div><input type="radio" name="modo" id="modo_boligrama">Boligrama oficial
+                    <input type="radio" name="modo" id="modo_alumno">Avance personal</div>
+            </div>
+         </div>
+         <div id="logo"></div>
+      </div>
+      <div id="visualizacion">
+         <div id="filas_principales"></div>
+         <div id="filas_optativas"></div>
+         <div id="filas_areas"></div>
+         <svg id="flechas" width="100%" height="100%">
+            <marker id="triangle" viewBox="0 0 10 10" refX="0" refY="5" markerUnits="strokeWidth" markerWidth="7" markerHeight="5" orient="auto">
+               <path d="M 0,0 L 10,5 L 0,10 Z" />
+            </marker>
+         </svg>
+      </div>
+      <div id="footer" style="display: none;">
+         <div id="comentario" style="display: none;">
+            Esta aplicación te permite visualizar tu avance académico y conocer más de tu plan de estudios. Al dar clic en una UEA, se señalarán en rojo sus requisitos y en azul las UEA seriadas con ésta. Al dar doble clic en una UEA, se mostrarán las UEA seriadas directa o indirectamente con ésta. En general, las filas superiores muestran las UEA de las que dependen el resto, por lo que sugerimos revisar cuáles aprobar pronto para no atrasarte en tus estudios.<br>
+            Este sistema es desarrollado por el Dr. Rodrigo Castro y el Dr. Francisco Zaragoza. Puedes enviar comentarios y reportes de error que tengan que ver <em>exclusivamente</em> con el boligrama interactivo a <a href="mailto:racc@azc.uam.mx">racc@azc.uam.mx</a>. Para cualquier otro asunto, consulta a la coordinación de tu licenciatura o a Sistemas Escolares.
+            <div id="comentario_cbi"></div>
+            <div id="comentario_csh"></div>
+            <div id="comentario_cyad"></div>
+         </div>
+         <div id="tabla" style="display: none;">
+            <table>
+               <tr>
+                  <th class="superior">Créditos</th>
+                  <th class="superior">Obligatorios</th>
+                  <th class="superior">Optativos</th>
+               </tr>
+               <tbody id="tabla_troncos"></tbody>
+            </table>
+         </div>
+         <div id="promedio" style="display: none;">
+            Para obtener tu promedio oficial, consulta la pestaña "Información Académica", sección "Datos Académicos" de tu Módulo Escolar o solicita tu historial académico en Sistemas Escolares.
+         </div>
+      </div>
+      <script>
+         let habilitado = true;
+         if (!habilitado) {
+            alert("Por solicitud de Sistemas Escolares de Rectoría, esta vía para acceder al Boligrama Interactivo estará desactivada del viernes 7 de octubre al lunes 10 de octubre de 2022.");
+            for (let input of document.getElementsByTagName("input")) {
+               input.disabled = true;
+            }
+         }
+      
+         function biyeccion_periodo(periodo) {
+            return { 
+               "0": "I", "1": "P", "2": "O",
+               "I":  0 , "P":  1 , "O":  2
+            }[periodo];
+         }
+
+         function compara_trimestres(trimestre1, trimestre2) {
+            return (trimestre1.anyo != trimestre2.anyo ? trimestre1.anyo - trimestre2.anyo : biyeccion_periodo(trimestre1.periodo) - biyeccion_periodo(trimestre2.periodo));
+         }
+         
+         function calcula_coordenadas(div1, div2) {
+            let x1 = div1.offsetLeft + div1.offsetWidth / 2, y1 = div1.offsetTop + div1.offsetHeight / 2;
+            let x2 = div2.offsetLeft + div2.offsetWidth / 2, y2 = div2.offsetTop + div2.offsetHeight / 2;
+
+            if (Math.abs(x1 - x2) >= 10) {
+               if (x1 < x2) {
+                  x1 += div1.offsetWidth / 2.5;
+                  x2 -= div2.offsetWidth / 2.5;
+               } else if (x1 > x2) {
+                  x1 -= div1.offsetWidth / 2.5;
+                  x2 += div2.offsetWidth / 2.5;
+               }
+            }
+            
+            if (Math.abs(y1 - y2) >= 10) {
+               if (y1 < y2) {
+                  y1 += div1.offsetHeight / 2.5;
+                  y2 -= div2.offsetHeight / 2.5;
+               } else if (y1 > y2) {
+                  y1 -= div1.offsetHeight / 2.5;
+                  y2 += div2.offsetHeight / 2.5;
+               }
+            }
+            
+            return { "x1": x1, "y1": y1, "x2": x2, "y2": y2 };
+         }
+                
+         function muestra_seriacion(uea) {
+            let div = document.getElementById(uea.clave);
+            let svg = document.getElementById("flechas");
+            div.classList.add("uea_elegida", "uea_elegida_seriacion");
+            
+            let mostrar = ( ) => {
+               let id = 0; quita_lineas( );
+               if (uea.seriaciones.length != 0) {
+                  let indice = div.activa++;
+                  div.activa %= uea.seriaciones.length;
+                  div.getElementsByClassName("seriacion_leyenda")[0].textContent = div.leyendas[indice];
+                  if (uea.seriaciones[indice].ueas != undefined) {
+                     for (let i = 0; i < uea.seriaciones[indice].ueas.length; ++i) {
+                        let otro = document.getElementById(uea.seriaciones[indice].ueas[i].clave);
+                        if (otro != null) {
+                           svg.appendChild(create_svg("line", { "id": "linea" + id++, "configure_attributes": [ Object.assign({ "class": (uea.seriaciones[indice].ueas[i].coseriada ? "coseriacion" : "seriacion") }, calcula_coordenadas(otro, div)) ] }));
+                        }
+                     }
+                  }
+               }
+               if (uea.habilitaciones != undefined) {
+                  for (let i = 0; i < uea.habilitaciones.length; ++i) {
+                     let otro = document.getElementById(uea.habilitaciones[i].clave);
+                     if (otro != null) {
+                        svg.appendChild(create_svg("line", { "id": "linea" + id++, "configure_attributes": [ Object.assign({ "class": (uea.habilitaciones[i].coseriada ? "cohabilitacion" : "habilitacion") }, calcula_coordenadas(div, otro)) ] }));
+                     }
+                  }
+               }
+            };
+            
+            mostrar( );
+            if (uea.seriaciones.length != 1) {
+               div.timer = window.setInterval(mostrar, 1750);
+            }
+         }
+
+         function muestra_sucesion(uea) {
+            let div = document.getElementById(uea.clave);
+            div.classList.add("uea_elegida", "uea_elegida_sucesion");
+            for (let div of Array.from(document.getElementById("visualizacion").getElementsByClassName("uea"))) {
+               div.classList.add("uea_semivisible");
+            }
+            
+            let pendientes = [ div ], visitadas = new Set([ uea.clave ]);
+            do {
+               let div = pendientes.pop( ), uea = div.uea;
+               div.classList.remove("uea_semivisible");
+               if (uea.habilitaciones != undefined) {
+                  for (let i = 0; i < uea.habilitaciones.length; ++i) {
+                     let otro = document.getElementById(uea.habilitaciones[i].clave);
+                     if (otro != null && !visitadas.has(uea.habilitaciones[i].clave)) {
+                        pendientes.push(document.getElementById(uea.habilitaciones[i].clave));
+                        visitadas.add(uea.habilitaciones[i].clave);
+                     }
+                  }
+               }
+            } while (pendientes.length != 0);
+         }
+         
+         function quita_lineas( ) {
+            for (let id = 0, linea; linea = document.getElementById("linea" + id); ++id) {
+               linea.parentNode.removeChild(linea);
+            }
+         }
+                           
+         function oculta_toggle_impl(lista) {
+            for (let div of Array.from(lista)) {
+               window.clearInterval(div.timer);
+               div.timer = null; div.activa = 0;
+               div.classList.remove("uea_elegida", "uea_elegida_seriacion", "uea_elegida_sucesion");
+            }
+            for (let div of Array.from(document.getElementById("visualizacion").getElementsByClassName("uea_semivisible"))) {
+               div.classList.remove("uea_semivisible");
+            }
+            quita_lineas( );
+         }
+             
+         function oculta_toggle( ) {
+            oculta_toggle_impl(document.getElementsByClassName("uea_elegida"));
+         }
+             
+         function cambia_toggle(uea) {
+            let lista = document.getElementsByClassName("uea_elegida");
+            let clave_anterior = (lista.length != 0 ? lista[0].id : undefined);
+            let modo_anterior = (lista.length != 0 ? (lista[0].classList.contains("uea_elegida_sucesion") ? "sucesion" : "seriacion") : undefined);
+            let semi_actual = document.getElementById(uea.clave).classList.contains("uea_semivisible");
+
+            oculta_toggle_impl(lista);
+            if (!semi_actual) {
+               if (clave_anterior != uea.clave) {
+                  muestra_seriacion(uea);
+               } else if (modo_anterior == "seriacion") {
+                  muestra_sucesion(uea);
+               }
+            }
+         }
+       
+         function dibuja_uea(celda, uea, avance) {
+            celda.uea = uea;
+            celda.timer = null;
+            celda.activa = 0;
+            celda.id = uea.clave;
+            celda.classList.add(uea.ubicacion[0]);
+            celda.onclick = (evento) => { cambia_toggle(uea); evento.stopPropagation( ); };
+            celda.appendChild(create_html("div", { "className": "clave", "textContent": uea.clave }));
+            celda.appendChild(create_html("div", { "className": "creditos", "textContent": (uea.creditos != null ? uea.creditos + " créditos" : "") }));
+            celda.appendChild(create_html("div", { "className": "nombre", "textContent": uea.nombre.split("(")[0] }));
+            celda.appendChild(create_html("div", { "className": "seriacion_leyenda", "textContent": "" }));
+
+            celda.leyendas = [ ];
+            for (let i = 0; i < uea.seriaciones.length; ++i) {
+               let leyenda = [ ];
+               if (uea.seriaciones[i].creditos != undefined) {
+                  for (let j = 0; j < uea.seriaciones[i].creditos.length; ++j) {
+                     leyenda.push(uea.seriaciones[i].creditos[j].numero + " créditos" + (uea.seriaciones[i].creditos[j].ubicacion.length != 0 ? " de " + uea.seriaciones[i].creditos[j].ubicacion.join("/").toUpperCase( ) : ""));
+                  }
+               }
+               if (uea.seriaciones[i].limite_ueas != undefined) {
+                  leyenda.push("máximo " + uea.seriaciones[i].limite_ueas + " UEA del nivel");
+               }
+               if (uea.seriaciones[i].otras != undefined) {
+                  if (uea.seriaciones[i].otras.includes("autorizacion") || uea.seriaciones[i].otras.includes("eleccion_area")) {
+                     leyenda.push("autorización");
+                  }
+                  if (uea.seriaciones[i].otras.includes("equivalencia")) {
+                     leyenda.push("equivalencia");
+                  }
+               }
+               celda.leyendas.push((leyenda.length == 0 ? "" : (leyenda.length == 1 ? leyenda.pop( ) : [ leyenda.slice(0, -1).join(", "), leyenda.pop( ) ].join(" y "))));
+            }
+
+            if (avance.ueas[uea.clave].calificacion != undefined || avance.ueas[uea.clave].inscrita) {
+               let calificacion = celda.appendChild(create_html("div", { "className": "calificacion" }));
+               if (avance.ueas[uea.clave].estado != +1 && avance.ueas[uea.clave].reprobaciones != undefined) {
+                  calificacion.textContent = "(" + avance.ueas[uea.clave].reprobaciones + ") ";
+               }
+               if (avance.ueas[uea.clave].inscrita) {
+                  calificacion.appendChild(create_html("img", { "src": "images/reloj.png" }));     // https://www.pngall.com/es/hourglass-png/download/46369
+               } else {
+                  calificacion.textContent += avance.ueas[uea.clave].calificacion;
+               }
+            }
+
+            if (avance.ueas[uea.clave].estado > 0) {
+               celda.classList.add("uea_aprobada");
+            } else if (avance.ueas[uea.clave].estado < 0 && !avance.ueas[uea.clave].inscrita) {
+               celda.classList.add("uea_bloqueada");
+            } else {
+               celda.classList.add("uea_disponible");
+            }
+         }
+                     
+         function dibuja_general(plan, alumno) {
+            let general = document.getElementById("general");
+            let datos = { "matricula": alumno.matricula, "paterno": alumno.paterno, "materno": alumno.materno, "nombre": alumno.nombre, "carrera": plan.nombre };
+            for (let clave in datos) {
+               if (datos[clave] != undefined) {
+                  general.appendChild(create_html("div", { "className": clave, "textContent": datos[clave] }));
+               }
+            }
+         }
+
+         function dibuja_mensaje(plan, alumno, avance) {
+            let mostrar = new Set( );
+            let marca_ahora = avance.trimestre.anyo * 365 + 365 / 3 * biyeccion_periodo(avance.trimestre.periodo);
+            let marca_2020I = 2020 * 365 + 365 / 3 * biyeccion_periodo("I");
+            let marca_2023P = 2023 * 365 + 365 / 3 * biyeccion_periodo("P");
+            let marca_ingreso = alumno.ingreso.anyo * 365 + 365 / 3 * biyeccion_periodo(alumno.ingreso.periodo);
+
+            if ([ "1", "2", "3", "10", "14", "20" ].indexOf(alumno.estado) >= 0 && marca_ingreso < marca_ahora) {
+               let trimestres = (marca_ahora - marca_ingreso) / (365 / 3);
+               let trimestres_efectivos = (Math.max(marca_2020I - marca_ingreso, 0) + Math.max(marca_ahora - marca_2023P, 0)) / (365 / 3);
+               let promedio_creditos = avance.creditos.contables / trimestres;
+               let promedio_creditos_efectivos = avance.creditos.contables / Math.max(trimestres_efectivos, 1);
+               let faltan_obligatorias = 0;
+               let quinta_oportunidad = false;
+
+               for (let clave in plan.ueas) {
+                  if (avance.ueas[clave].estado != +1) {
+                     faltan_obligatorias += plan.ueas[clave].obligatoria;
+                     if (avance.ueas[clave].reprobaciones) {
+                        quinta_oportunidad |= (avance.ueas[clave].reprobaciones >= 4);
+                     }
+                  }
+               }
+
+               if (quinta_oportunidad) {
+                  mostrar.add("quinta_oportunidad");
+               }
+
+               if (faltan_obligatorias <= 5 && plan.creditos.minimos - avance.creditos.contables <= 90) {
+                  mostrar.add((trimestres_efectivos < 27 ? "egreso_proximo" : "egreso_proximo_riesgo"));
+               } else if (trimestres_efectivos >= 27) {
+                  mostrar.add("tiempo_riesgo");
+               } else {
+                  let anyos = Math.max(Math.round(plan.creditos.minimos / Math.max(promedio_creditos, 0.001) / 3), 1);
+                  if (anyos <= 10) {
+                     mostrar.add("ritmo_" + anyos + "anyos");
+                  } else if (trimestres < 7 || (promedio_creditos_efectivos * trimestres_efectivos) + (Math.max(promedio_creditos_efectivos, 22.5) * (30 - trimestres_efectivos)) >= plan.creditos.minimos) {
+                     mostrar.add("ritmo_10+anyos");
+                  } else {
+                     mostrar.add("ritmo_riesgoso");
+                  }
+               }
+            }
+
+            if (mostrar.size != 0) {
+               document.getElementById("mensaje").style.display = "";
+               for (let div of Array.from(document.getElementById("mensaje").getElementsByTagName("div"))) {
+                  div.style.display = (mostrar.has(div.id) ? "" : "none");
+               }
+            }
+         }
+         
+         function dibuja_codigo(plan) {
+            document.getElementById("codigo").style.display = "";
+
+            let cuerpo = document.getElementById("codigo_troncos");
+            for (let tronco in plan.niveles) {
+               cuerpo.appendChild(create_html("div", { "className": "uea codigo " + tronco, "textContent": plan.niveles[tronco].nombre.replace(/\s*\(.*?\)\s*/, "") }));
+            }
+         }
+         
+         function dibuja_logo(plan) {
+            document.getElementById("logo").appendChild(create_html("img", { "src": "images/" + plan.division + ".png" }));
+         }
+         
+         function dibuja_comentario(plan) {
+            document.getElementById("comentario").style.display = "";
+            document.getElementById("comentario_" + plan.division).style.display = "";
+         }
+         
+         function dibuja_tabla(plan, avance) {
+            document.getElementById("tabla").style.display = "";
+
+            let crea_celda = (izq, der) => {
+               let celda = create_html("td");
+               if (izq != undefined) {
+                  celda.appendChild(create_html("span", { "className": "dato_izq", "textContent": izq }));
+                  if (der != "") {
+                     celda.appendChild(create_text(" de "));
+                     celda.appendChild(create_html("span", { "className": "dato_der", "textContent": der }));
+                  }
+               }
+               return celda;
+            };
+            let crea_fila = (plan, avance, clase) => {
+               let fila = create_html("tr", { "appendChild": [ 
+                  create_html("th", { "className": "izquierdo " + clase, "appendChild": [
+                     create_html("span", { "textContent": "Créditos de " + plan.nombre + ":" })
+                  ] })
+               ] });
+               for (let tipo of [ "obligatorias", "optativas" ]) {
+                  fila.appendChild(avance.creditos[tipo] == 0 && ((tipo == "obligatorias" && plan.creditos[tipo] == 0) || (tipo == "optativas" && plan.creditos.minimos == plan.creditos.obligatorias)) ? crea_celda( ) : crea_celda(avance.creditos[tipo], 
+                     (tipo == "obligatorias" ? plan.creditos.obligatorias : Array.prototype.concat(
+                        (plan.creditos.minimos == 0 ? [ ] : [ plan.creditos.minimos - plan.creditos.obligatorias + " mín" ]),
+                        (plan.creditos.maximos == plan.creditos.obligatorias + plan.creditos.optativas ? [ ] : [ (plan.creditos.maximos - plan.creditos.obligatorias) + " máx" ])
+                  ).join(", "))));
+               }
+               return fila;
+            };
+            let cuerpo = document.getElementById("tabla_troncos");
+            
+            (function crea_niveles(plan, avance, altura) {
+               if (plan.niveles != undefined) {
+                  for (let clave in plan.niveles) {
+                     if (plan.niveles[clave].creditos.minimos != 0 || avance.niveles[clave].creditos.aprobados != 0) {
+                        cuerpo.appendChild(crea_fila(plan.niveles[clave], avance.niveles[clave], "nivel_" + (altura + 1)));
+                        crea_niveles(plan.niveles[clave], avance.niveles[clave], altura + 1);
+                     }
+                  }
+               }
+            })(plan, avance, 0);
+
+            let mostrar_minmax = (plan.creditos.maximos != plan.creditos.obligatorias + plan.creditos.optativas);
+            for (let politica of (mostrar_minmax && avance.creditos.cubiertos != avance.creditos.aprobados ? [ "aprobados", "cubiertos", "contables" ] : [ "cubiertos", "contables" ])) {
+               let fila = cuerpo.appendChild(create_html("tr", { "appendChild": [ create_html("th", { "className": "izquierdo", "textContent": "Créditos " + (politica == "contables" ? "contabilizados" : politica) + ":" }) ] }));
+               fila.appendChild(crea_celda(avance.creditos.obligatorias, plan.creditos.obligatorias));
+               fila.appendChild(crea_celda(avance.creditos[politica] - avance.creditos.obligatorias, plan.creditos.minimos - plan.creditos.obligatorias + (mostrar_minmax && politica != "contables" ? " mín, " + (plan.creditos.maximos - plan.creditos.obligatorias) + " máx": "")));
+               fila.appendChild(crea_celda(avance.creditos[politica], plan.creditos.minimos + (mostrar_minmax && politica != "contables" ? " mín, " + plan.creditos.maximos + " máx" : "")));
+            }
+         }
+
+         function dibuja_promedio(alumno, avance) {
+            document.getElementById("promedio").style.display = "";
+         }
+            
+         function dibuja_principales(plan, avance, matriz) {
+            let principal = document.getElementById("filas_principales");
+            for (let i = 0; i < matriz.length; ++i) {
+               let fila = principal.appendChild(create_html("div", { "className": "fila", "appendChild": [
+                  create_html("div", { "className": "celda caption", "appendChild": [ 
+                     create_html("div", { "className": "leyenda", "textContent": matriz[i].trimestre })
+                  ] })
+               ] }));
+
+               for (let j = 0; j < matriz[i].length; ++j) {
+                  let celda = fila.appendChild(create_html("div", { "className": "celda" }));
+                  if (matriz[i][j] != undefined) {
+                     celda.classList.add("uea");
+                     dibuja_uea(celda, matriz[i][j], avance);
+                  } else {
+                     celda.classList.add("placeholder");
+                     celda.appendChild(create_html("div", { "className": "nombre", "textContent": " " }));
+                  }
+               }
+            }
+         }
+
+         function dibuja_optativas(plan, avance, opt_criticas, columnas) {
+            let principal = document.getElementById("filas_optativas");
+            for (let tronco in plan.niveles) {
+               let claves = Array.from(new Set(Array.prototype.concat(avance.niveles[tronco].aprobadas, avance.niveles[tronco].inscritas, opt_criticas))).filter((clave) => { return !plan.ueas[clave].obligatoria && plan.ueas[clave].ubicacion[0] == tronco; });
+               for (let i = 0, fila; i < claves.length; ++i) {
+                  if (i % columnas == 0) {
+                     fila = principal.appendChild(create_html("div", { "className": "fila", "appendChild": [
+                        create_html("div", { "className": "celda caption", "appendChild": [
+                           create_html("div", { "className": "leyenda", "textContent": (i == 0 ? (plan.niveles[tronco].nombre.startsWith("Optativas") ? "" : "Optativas de ") + plan.niveles[tronco].nombre : " ") })
+                        ] })
+                     ] }));
+                  }
+                  dibuja_uea(fila.appendChild(create_html("div", { "className": "celda uea" })), plan.ueas[claves[i]], avance);
+               }
+            }
+         }
+         
+         function dibuja_areas(plan, avance, ueas_ficticias_areas, columnas) {
+            let principal = document.getElementById("filas_areas");
+            for (let i = 0, fila; i < ueas_ficticias_areas.length; ++i) {
+               if (i % columnas == 0) {
+                  fila = principal.appendChild(create_html("div", { "className": "fila", "appendChild": [
+                     create_html("div", { "className": "celda caption", "appendChild": [
+                        create_html("div", { "className": "leyenda", "textContent": (i == 0 ? "Áreas de concentración" : " ") })
+                     ] })
+                  ] }));
+               }
+               dibuja_uea(fila.appendChild(create_html("div", { "className": "celda uea area" })), ueas_ficticias_areas[i], avance);
+            }
+         }
+         
+         function matriz_impl(ueas_trimestre, ueas_penalizar, orden_troncos, trimestres_reales) {
+            let trimestres = Object.keys(ueas_trimestre).sort((trimestres_reales ? (trimestre1, trimestre2) => {
+               return compara_trimestres({ "anyo": parseInt(trimestre1, 10), "periodo": trimestre1.slice(-1) }, { "anyo": parseInt(trimestre2, 10), "periodo": trimestre2.slice(-1) });
+            } : new Intl.Collator(undefined, { "numeric": true, "sensitivity": "base" }).compare));
+            let columnas = trimestres.reduce((max, trimestre) => { 
+               return Math.max(max, ueas_trimestre[trimestre].length);
+            }, 6);
+            
+            let orden_uea = (uea1, uea2) => {
+               let t1 = [ orden_troncos[uea1.ubicacion[0]], uea1.clave ];
+               let t2 = [ orden_troncos[uea2.ubicacion[0]], uea2.clave ];
+               return (t2 < t1) - (t1 < t2);
+            };
+            ueas_penalizar.sort(orden_uea);
+            for (let i in ueas_trimestre) {
+               ueas_trimestre[i].sort(orden_uea);
+            }
+            
+            let matriz = new Array(trimestres.length + Math.ceil(ueas_penalizar.length / columnas));
+            for (let i = 0, troncos = Object.keys(orden_troncos).length; i < matriz.length; ++i) {
+               matriz[i] = new Array(columnas);
+               matriz[i].trimestre = (i < trimestres.length ? "Trimestre " + trimestres[i] : (i == trimestres.length ? "Obligatorias faltantes" : ""));
+
+               let ueas = (i < trimestres.length ? ueas_trimestre[trimestres[i]] : ueas_penalizar.slice(columnas * (i - trimestres.length), columnas * (i - trimestres.length) + columnas));
+               let izq = 0, margen = (ueas.length < columnas && orden_troncos[ueas[ueas.length - 1].ubicacion[0]] != troncos - 1);
+               for (; izq < ueas.length && orden_troncos[ueas[izq].ubicacion[0]] <= 1; ++izq) {
+                  matriz[i][izq] = ueas[izq];
+               }
+               for (let j = 0; j < ueas.length - izq; ++j) {
+                  matriz[i][columnas - 1 - j - margen] = ueas[ueas.length - 1 - j];
+               }
+            }
+            
+            return matriz;
+         }
+
+         function matriz_alumno(plan, alumno, avance, orden_troncos) {
+            let ueas_trimestre = { }, ueas_penalizar = [ ];
+            for (let clave in plan.ueas) {
+               if (avance.ueas[clave].estado > 0 || avance.ueas[clave].inscrita) {
+                  let trimestre = (avance.ueas[clave].inscrita ? avance.trimestre : avance.ueas[clave].trimestre);
+                  let trimestre_clave = trimestre.anyo + "-" + trimestre.periodo;
+                  if (ueas_trimestre[trimestre_clave] == undefined) {
+                     ueas_trimestre[trimestre_clave] = [ ];
+                  }
+                  ueas_trimestre[trimestre_clave].push(plan.ueas[clave]);
+               } else if (plan.ueas[clave].obligatoria) {
+                  ueas_penalizar.push(plan.ueas[clave]);
+               }
+            }
+            return matriz_impl(ueas_trimestre, ueas_penalizar, orden_troncos, true);
+         }
+
+         function matriz_boligrama(plan, alumno, orden_troncos) {
+            let ueas_trimestre = { };
+            for (let clave in plan.ueas) {
+               if (plan.ueas[clave].obligatoria) {
+                  if (ueas_trimestre[plan.ueas[clave].trimestre] == undefined) {
+                     ueas_trimestre[plan.ueas[clave].trimestre] = [ ];
+                  }
+                  ueas_trimestre[plan.ueas[clave].trimestre].push(plan.ueas[clave]);
+               }
+            }
+            return matriz_impl(ueas_trimestre, [ ], orden_troncos, false);
+         }
+              
+         function avance_ubicacion(avance, ubicacion) {
+            for (let nivel of ubicacion) {
+               avance = avance.niveles[nivel];
+            }
+            return avance;
+         }
+              
+         function calcula_avance_uea(uea, plan, alumno, avance) {
+            if (avance.ueas[uea.clave] != undefined) {
+               return avance.ueas[uea.clave];
+            }
+            avance.ueas[uea.clave] = { "estado": undefined };
+
+            let intentos = alumno.kardex[uea.clave];
+            if (intentos != undefined) {
+               Object.assign(avance.ueas[uea.clave], { "calificacion": intentos[intentos.length - 1].calificacion, "reprobaciones": intentos.length, "trimestre": intentos[intentos.length - 1].trimestre });
+               if (intentos[intentos.length - 1].calificacion != "NA") {
+                  return Object.assign(avance.ueas[uea.clave], { "estado": +1, "reprobaciones": intentos.length - 1});
+               }
+            }
+
+            let verifica = (seriacion) => {
+               if (seriacion.ueas != undefined) {
+                  for (let i = 0; i < seriacion.ueas.length; ++i) {
+                     if (calcula_avance_uea(plan.ueas[seriacion.ueas[i].clave], plan, alumno, avance).estado + seriacion.ueas[i].coseriada < +1) {
+                        return false;
+                     }
+                  }
+               }
+               if (seriacion.creditos != undefined) {
+                  for (let i = 0; i < seriacion.creditos.length; ++i) {
+                     if (seriacion.creditos[i].numero > avance_ubicacion(avance, seriacion.creditos[i].ubicacion).creditos.cubiertos) {
+                        return false;
+                     }
+                  }
+               }
+               if (seriacion.limite_ueas != undefined) {
+                  if (seriacion.limite_ueas <= ((avance) => avance.aprobadas.length + avance.inscritas.length)(avance_ubicacion(avance, uea.ubicacion))) {
+                     return false;
+                  }
+               }
+               if (seriacion.otras != undefined) {
+                  if (seriacion.otras.indexOf("autorizacion") != -1 && alumno.autorizaciones != undefined && alumno.autorizaciones.indexOf(uea.clave) == -1 || seriacion.otras.indexOf("equivalencia") != -1) {
+                     return false;
+                  }
+               }
+               return true;
+            };
+            for (let i = 0; i < uea.seriaciones.length; ++i) {
+               if (verifica(uea.seriaciones[i])) {
+                  return Object.assign(avance.ueas[uea.clave], { "estado": 0 });
+               }
+            }
+            
+            return Object.assign(avance.ueas[uea.clave], { "estado": -1 });
+         }
+                
+         function calcula_avance_completo(plan, alumno, trimestre) {
+            let avance = { "ueas": { }, "trimestre": trimestre };
+            
+            (function inicializa(plan, avance) {
+               Object.assign(avance, { "aprobadas": [ ], "inscritas": [ ], "creditos": { "obligatorias": 0, "optativas": 0, "aprobados": 0, "cubiertos": 0, "penalizar": 0 }, "plan": plan });
+               if (plan.niveles != undefined) {
+                  avance.niveles = { };
+                  for (let clave in plan.niveles) {
+                     inicializa(plan.niveles[clave], avance.niveles[clave] = { });
+                  }
+               }
+            })(plan, avance);
+
+            for (let clave in plan.ueas) {
+               let avances = [ ], aprobada = (alumno.kardex[clave] != undefined && alumno.kardex[clave][alumno.kardex[clave].length - 1].calificacion != "NA"), inscrita = alumno.inscritas.includes(clave);
+               for (let i = 0, avance_actual = avance; avance_actual != null; ++i) {
+                  avances.push(avance_actual);
+                  avance_actual = (plan.ueas[clave].ubicacion[i] != undefined ? avance_actual.niveles[plan.ueas[clave].ubicacion[i]] : null);
+               }
+               for (let i = avances.length - 1; i >= 0 && (!avances[i].plan.ignorar_otras_areas || alumno.area in (plan.ueas[clave].areas ?? { })); --i) {
+                  if (aprobada) {
+                     avances[i].creditos[(plan.ueas[clave].obligatoria ? "obligatorias" : "optativas")] += plan.ueas[clave].creditos;
+                     avances[i].aprobadas.push(clave);
+                  } else if (inscrita) {
+                     avances[i].inscritas.push(clave);
+                  }
+               }
+            }
+
+            (function cuenta_creditos(plan, avance) {
+               avance.creditos.aprobados = avance.creditos.obligatorias + avance.creditos.optativas;
+               if (plan.niveles == undefined) {
+                  avance.creditos.cubiertos = avance.creditos.aprobados;
+               } else {
+                  let acumulado_hijos_aprobados = 0;
+                  for (let clave in plan.niveles) {
+                     cuenta_creditos(plan.niveles[clave], avance.niveles[clave]);
+                     acumulado_hijos_aprobados += avance.niveles[clave].creditos.aprobados;
+                     avance.creditos.cubiertos += avance.niveles[clave].creditos.cubiertos;
+                     avance.creditos.penalizar += avance.niveles[clave].creditos.penalizar;
+                  }
+                  avance.creditos.cubiertos += avance.creditos.aprobados - acumulado_hijos_aprobados;
+               }
+               avance.creditos.cubiertos = Math.min(avance.creditos.cubiertos, plan.creditos.maximos);      // los créditos cubiertos se limitan por los máximos
+               avance.creditos.penalizar = plan.creditos.minimos - plan.creditos.obligatorias - Math.min(avance.creditos.cubiertos - avance.creditos.obligatorias, plan.creditos.minimos - plan.creditos.obligatorias - avance.creditos.penalizar);
+            })(plan, avance);    // los créditos contabilizados no se calculan por nivel, sino como un total final a partir de los créditos cubiertos (previamente limitados) y las penalizaciones (que vienen de los créditos faltantes mínimos requeridos de optativas)
+            avance.creditos.contables = avance.creditos.obligatorias + Math.min(avance.creditos.cubiertos - avance.creditos.obligatorias, plan.creditos.minimos - plan.creditos.obligatorias - avance.creditos.penalizar);
+
+            for (let clave in plan.ueas) {
+               calcula_avance_uea(plan.ueas[clave], plan, alumno, avance);
+            }
+            for (let clave in plan.ueas) {
+               if (avance.ueas[clave].estado == 0) {
+                  avance.ueas[clave] = undefined;
+               }
+            }
+            for (let clave in plan.ueas) {
+               calcula_avance_uea(plan.ueas[clave], plan, alumno, avance);
+            }
+            for (let i = 0; i < alumno.inscritas.length; ++i) {
+               avance.ueas[alumno.inscritas[i]].inscrita = true;
+            }
+            
+            return avance;
+         }
+         
+         function organiza_kardex(alumno) {
+            let nuevo = { };
+            for (let i = 0; i < alumno.kardex.length; ++i) {
+               if (nuevo[alumno.kardex[i].clave] == undefined) {
+                  nuevo[alumno.kardex[i].clave] = [ ];
+               }
+               nuevo[alumno.kardex[i].clave].push(alumno.kardex[i]);
+            }
+            
+            alumno.kardex = nuevo;
+            for (let clave in nuevo) {
+               nuevo[clave].sort((intento1, intento2) => {
+                  let na1 = -(intento1.calificacion == "NA"), na2 = -(intento2.calificacion == "NA");
+                  let tipo1 = -intento1.evaluacion.startsWith("GLO"), tipo2 = -intento2.evaluacion.startsWith("GLO");
+                  let acta1 = (parseInt(intento1.acta, 10) == 0 ? Number.MAX_VALUE : parseInt(intento1.acta, 10));
+                  let acta2 = (parseInt(intento2.acta, 10) == 0 ? Number.MAX_VALUE : parseInt(intento2.acta, 10));
+                  let cmp0 = na1 - na2, cmp1 = compara_trimestres(intento1.trimestre, intento2.trimestre), cmp2 = tipo1 - tipo2, cmp3 = acta1 - acta2;
+                  return (cmp0 != 0 ? cmp0 : (cmp1 != 0 ? cmp1 : (cmp2 != 0 ? cmp2 : cmp3)));
+               });
+            }
+         }
+         
+         function remueve_invalidas(plan, alumno) {
+            let pred = (clave) => { return plan.ueas[clave] != undefined; };
+            for (let clave in alumno.kardex) {
+               if (!pred(clave)) {
+                  delete alumno.kardex[clave];
+               }
+            }
+
+            alumno.inscritas = alumno.inscritas.filter(pred);
+            if (alumno.autorizaciones != undefined) {
+               alumno.autorizaciones = alumno.autorizaciones.filter(pred);
+            }
+         }
+                 
+         function aplica_concentracion(plan, alumno) {
+            let seriaciones_areas = { }, ueas_obl_areas = [ ];
+            if (parseInt(alumno.area) > 0) {
+               for (let clave in plan.ueas) {
+                  if (plan.ueas[clave].areas?.[alumno.area]?.obligatoria) {
+                     plan.ueas[clave].obligatoria = true;
+                     for (let i = 0, plan_actual = plan; plan_actual != null; ++i) {
+                        plan_actual.creditos.obligatorias += plan.ueas[clave].creditos, plan_actual.creditos.optativas -= plan.ueas[clave].creditos;
+                        plan_actual = (plan.ueas[clave].ubicacion[i] != undefined ? plan_actual.niveles[plan.ueas[clave].ubicacion[i]] : null);
+                     }
+                  }
+               }
+            } else {
+               for (let area in plan.areas) {
+                  for (let clave in plan.ueas) {
+                     if (plan.ueas[clave].areas?.[area]?.obligatoria) {
+                        if (seriaciones_areas[area] == undefined) {
+                           seriaciones_areas[area] = [ ];
+                        }
+                        for (let seriacion of plan.ueas[clave].seriaciones) {
+                           for (let requisito of (seriacion.ueas ?? [ ])) {
+                              seriaciones_areas[area].push(requisito.clave);
+                           }
+                        }
+                        ueas_obl_areas.push(clave);
+                     }
+                  }
+               }
+            }
+            return { "seriaciones_areas": seriaciones_areas, "ueas_obl_areas": ueas_obl_areas };
+         }
+                                         
+         function calcula_optativas_criticas(plan, ueas_obl_areas) {
+            let res = [ ], cola = Object.keys(plan.ueas).filter((clave) => plan.ueas[clave].obligatoria).concat(ueas_obl_areas), vistas = new Set(cola);
+            while (cola.length != 0) {
+               let clave = cola.pop( );
+               for (let seriacion of plan.ueas[clave].seriaciones) {
+                  for (let requisito of (seriacion.ueas ?? [ ])) {
+                     if (!plan.ueas[requisito.clave].obligatoria && !vistas.has(requisito.clave)) {
+                        res.push(requisito.clave);
+                        cola.push(requisito.clave);
+                        vistas.add(requisito.clave);
+                     }
+                  }
+               }
+            }
+            return res;
+         }
+               
+         function anota_habilitaciones(plan, seriaciones_areas) {
+            for (let clave in plan.ueas) {
+               for (let seriacion of plan.ueas[clave].seriaciones) {
+                  for (let requisito of (seriacion.ueas ?? [ ])) {
+                     if (plan.ueas[requisito.clave].habilitaciones == undefined) {
+                        plan.ueas[requisito.clave].habilitaciones = [ ];
+                     }
+                     plan.ueas[requisito.clave].habilitaciones.push({ "clave": clave, "coseriada": requisito.coseriada });
+                  }
+               }
+            }
+            
+            for (let area in seriaciones_areas) {
+               for (let clave of seriaciones_areas[area]) {
+                  if (plan.ueas[clave].habilitaciones == undefined) {
+                     plan.ueas[clave].habilitaciones = [ ];
+                  }
+                  plan.ueas[clave].habilitaciones.push({ "clave": `Área ${area}`, "coseriada": false });
+               }
+            }
+         }
+         
+         function crea_ficticias_areas(plan, alumno, seriaciones_areas) {
+            let res = [ ];
+            if (!(parseInt(alumno.area) > 0)) {
+               for (let area in plan.areas) {
+                  res.push({ "clave": `Área ${area}`, "nombre": plan.areas[area].nombre, "ubicacion": [ "ac" ], "seriaciones": [ { 
+                     "ueas": Array.from(new Set((seriaciones_areas?.[area] ?? [ ]))).map((clave) => ({ "clave": clave, "coseriada": false })), 
+                     "otras": [ "eleccion_area" ] 
+                  } ] });
+               }
+            }
+            return res;
+         }
+               
+         function dibuja_visualizacion(plan, alumno, trimestre, orden_troncos) {
+            organiza_kardex(alumno);
+            remueve_invalidas(plan, alumno);
+            let {seriaciones_areas, ueas_obl_areas} = aplica_concentracion(plan, alumno);
+            anota_habilitaciones(plan, seriaciones_areas);
+
+            let avance = calcula_avance_completo(plan, alumno, trimestre);
+            let matriz_a = matriz_alumno(plan, alumno, avance, orden_troncos);
+            let matriz_b = matriz_boligrama(plan, alumno, orden_troncos);
+            
+            let opt_criticas = calcula_optativas_criticas(plan, ueas_obl_areas);
+            let ueas_ficticias_areas = crea_ficticias_areas(plan, alumno, seriaciones_areas);
+            for (let uea of ueas_ficticias_areas) {
+               calcula_avance_uea(uea, plan, alumno, avance);
+            }
+            
+            document.body.onclick = oculta_toggle;
+            document.getElementById("modo_alumno").onchange = function(evento) {
+               if (this.checked) {
+                  limpia_boligrama( );
+                  dibuja_principales(plan, avance, matriz_a);
+               }
+            };
+            document.getElementById("modo_boligrama").onchange = function(evento) {
+               if (this.checked) {
+                  limpia_boligrama( );
+                  dibuja_principales(plan, avance, matriz_b);
+                  dibuja_optativas(plan, avance, opt_criticas, Math.max((matriz_b.length != 0 ? matriz_b[0].length : 0), 6));
+                  dibuja_areas(plan, avance, ueas_ficticias_areas, Math.max((matriz_b.length != 0 ? matriz_b[0].length : 0), 6));
+               }
+            };
+            
+            dibuja_general(plan, alumno);
+            dibuja_mensaje(plan, alumno, avance);
+            dibuja_codigo(plan);
+            dibuja_logo(plan);
+            dibuja_comentario(plan);
+            dibuja_tabla(plan, avance);
+            dibuja_promedio(alumno, avance);
+            let selector = document.getElementById("modo_boligrama");
+            selector.checked = true;
+            selector.onchange( );
+         }
+                  
+         function limpia_general( ) {
+            clear_children(document.getElementById("general"));
+         }
+            
+         function limpia_mensaje( ) {
+            document.getElementById("mensaje").style.display = "none";
+         }
+         
+         function limpia_codigo( ) {
+            document.getElementById("codigo").style.display = "none";
+            clear_children(document.getElementById("codigo_troncos"));
+         }
+         
+         function limpia_logo( ) {
+            clear_children(document.getElementById("logo"));
+         }
+         
+         function limpia_comentario( ) {
+            document.getElementById("comentario").style.display = "none";
+            document.getElementById("comentario_cbi").style.display = "none";
+            document.getElementById("comentario_csh").style.display = "none";
+            document.getElementById("comentario_cyad").style.display = "none";
+         }
+            
+         function limpia_tabla( ) {
+            document.getElementById("tabla").style.display = "none";
+            clear_children(document.getElementById("tabla_troncos"));
+         }
+
+         function limpia_promedio( ) {
+            document.getElementById("promedio").style.display = "none";
+         }
+
+         function limpia_boligrama( ) {
+            oculta_toggle( );
+            clear_children(document.getElementById("filas_principales"));
+            clear_children(document.getElementById("filas_optativas"));
+            clear_children(document.getElementById("filas_areas"));
+         }
+
+         function limpia_visualizacion( ) {
+            limpia_general( );
+            limpia_mensaje( );
+            limpia_codigo( );
+            limpia_logo( );
+            limpia_comentario( );
+            limpia_tabla( );
+            limpia_promedio( );
+            limpia_boligrama( );
+
+            document.body.onclick = undefined;
+            document.getElementById("modo_alumno").onclick = undefined;
+            document.getElementById("modo_boligrama").onclick = undefined;
+         }
+         
+         function prepara_visualizacion( ) {
+            limpia_visualizacion( );
+         }
+         
+         function cancela_visualizacion( ) {
+            limpia_visualizacion( );
+            document.getElementById("enviar").form.reset( );
+            document.getElementById("instrucciones").style.display = "";
+         }
+            
+         function deshabilita_interfaz( ) {
+            document.getElementById("modo_alumno").disabled = true;
+            document.getElementById("modo_boligrama").disabled = true;
+         }
+
+         function habilita_interfaz( ) {
+            document.getElementById("modo_alumno").disabled = false;
+            document.getElementById("modo_boligrama").disabled = false;
+         }
+
+         async function solicita_datos(plan_nombre = "1_15_modificado.json") {
+            deshabilita_interfaz( );
+            let plan = await ajax_get(plan_nombre, 5000);
+            habilita_interfaz( );
+            
+            if (plan instanceof Error) {
+               window.alert("Error al solicitar los datos del plan de estudios.");
+            } else {
+               prepara_visualizacion( );
+               dibuja_visualizacion(plan, { "area": "0", "estado": "-1", "ingreso": { "anyo": 2024, "periodo": "O" }, "kardex": [ ], "inscritas": [ ] }, { "anyo": 2024, "periodo": "O" }, (
+                  plan.division == "cbi" ? { "tg": 0, "tbp": 1, "tna": 2, "ti": 3, "tim": 4 } : (
+                  plan.division == "cyad" ? { "tg": 0, "tb": 1, "tp": 2, "ti": 3, "opt": 4 } : 
+                  plan.division == "csh" ? { "tg": 0, "tbp": 1, "ac": 2 } : { }
+               )));
+            }
+         }
+			
+			document.addEventListener("DOMContentLoaded", function(){
+            // Seleccionar el primer enlace como preseleccionado al cargar la página
+            const defaultSelected = document.querySelector(".menu li a");
+            if(defaultSelected){
+               defaultSelected.classList.add("selected");
+            }
+
+            // Agregar evento a todos los enlaces para cambiar la selección
+            document.querySelectorAll(".menu li a").forEach(link =>{
+               link.addEventListener("click", function(){
+                  // Remover la clase 'selected' de todos los enlaces
+                  document.querySelectorAll(".menu li a").forEach(item =>{
+                     item.classList.remove("selected");
+                  });
+
+                  // Agregar la clase 'selected' al enlace clicado
+                  this.classList.add("selected");
+               });
+            });
+         });
+
+      </script>
+   </body>
+</html>
